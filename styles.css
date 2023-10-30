@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'italiano';
+  src: url('typo/italianno.regular.ttf') format('truetype');
+  src: url('typo/italianno.regular.ttf') format('woff');
+  src: url('typo/italianno.regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* surlignement */
+mark {
+  background-color: #bf88bc57;
+  /* width: 212px; */
+  height: 93px;
+  /* display: inherit;  */
+}
+
+.ligne{
+  border: black dashed 1px;
+  width: 353px;
+  margin: auto;
+}
+  
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;  
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+.block_accueil{
+  background-image: url(./img/accueil_fond.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 110vh;
+}
+
+.block1{
+  display: flex;
+}
+
+.block_nav{
+  display: flex;
+  margin-top: 38px;
+  /* gap: 145px; ici ce n'est pas responsive*/
+}
+/* dimensionner la boite <nav> puis centrer ou faire gap sur .block_nav */
+
+nav{
+  margin-left: 57px;
+  background-color: #ffffff;
+  height: 100px;
+}
+
+.nav_ul{
+  display: flex;
+  gap: 50px;
+}
+
+.nav_ul a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.titre{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 57px;
+  gap: 20px;
+}
+
+.andrea{
+  font-family: "italiano";
+  font-size: 6.5rem;
+}
+
+.profession{
+  font-size: 2rem;
+  line-height: 40px
+}
+
+
+.mot{
+  display: flex;
+}
+
+/* DEGRADER */
+/* .block_photo{
+  height: 90vh;
+  background: linear-gradient(#381F31, #F29BAB, #BF88BC,#7977A6);
+} */
+
+
+
+
+
+
+/* TRAVAUX */
+.block_travaux{
+  border: #BF88BC 7px solid;
+}
+
+.titre_travaux{
+  font-family: "italiano";
+  font-size: 5rem;
+  padding-top: 52px;
+  padding-left: 52px;
+  font-weight: 550;
+}
+
+
+/* site web */
+.titre_block{
+  margin-left: 10%;
+  font-weight: 300;
+  padding-bottom: 10px;
+  font-family: "italiano";
+  font-size: 2.1rem;
+}
+
+.titre_blockvid{
+  font-style: italic;
+  font-weight: 300;
+  font-family: "italiano";
+}
+
+.block_siteweb{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 50px;
+  justify-content: space-around;
+} 
+
+.img_siteweb{
+  width: 46vw;
+object-fit: contain;
+min-width: 448px;
+}
+
+
+.block_texte{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 31px;
+}
+
+.bouton{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.competence{
+  border: #BF88BC solid 1px;
+  border-radius: 30% / 50%;
+  background-color: #bf88bc57;
+  padding: 5px;
+  margin: auto;
+}
+
+ .texte_siteweb{
+  width: 393px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+} 
+
+.texte_video{
+  width: 568px;
+}
+
+
+/* Vidéos */
+.video{
+  flex-direction: row-reverse;
+}
+
+.img_video{
+  width: 24vw;
+  object-fit: contain;
+  min-width: 224px; 
+}
+
+
