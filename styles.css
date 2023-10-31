@@ -124,12 +124,12 @@ nav{
 
 
 /* site web */
-.titre_block{
-  margin-left: 10%;
+.titre_mbsite, .titre_mbvideo{
   font-weight: 300;
   padding-bottom: 10px;
   font-family: "italiano";
-  font-size: 2.1rem;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 .titre_blockvid{
@@ -138,7 +138,7 @@ nav{
   font-family: "italiano";
 }
 
-.block_siteweb{
+.block_mbsite{
   display: flex;
   width: 80%;
   margin: auto;
@@ -146,7 +146,7 @@ nav{
   justify-content: space-around;
 } 
 
-.img_siteweb{
+.img_mbsite{
   width: 46vw;
 object-fit: contain;
 min-width: 448px;
@@ -157,7 +157,7 @@ min-width: 448px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 31px;
+  gap: 35px;
 }
 
 .bouton{
@@ -173,21 +173,17 @@ min-width: 448px;
   margin: auto;
 }
 
- .texte_siteweb{
+ .texte_mbsite{
   width: 393px;
   display: flex;
-  height: 100%;
   align-items: center;
-  text-align: center;
+  text-align: center; 
 } 
-
-.texte_video{
-  width: 568px;
-}
 
 
 /* Vidéos */
-.video{
+.blockmbvideo{
+  display: flex;
   flex-direction: row-reverse;
 }
 
@@ -197,4 +193,19 @@ min-width: 448px;
   min-width: 224px; 
 }
 
+
+.block_mbvideo{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 50px;
+  justify-content: space-around;
+} 
+
+.texte_mbvideo{
+  width: 586px;
+  display: flex;
+  align-items: center;
+  text-align: center; 
+}
 
