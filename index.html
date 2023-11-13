@@ -2,174 +2,321 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Portfolio</title>
 
-    <!--font titre  -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--font titre  -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet"> -->
 
 
-    <!-- font texte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- font texte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="bloc_accueil">
-        <div class="bloc1">
-            <div class="bloc_nav">
-                <div class="titre">
-                    <h1 class="andrea">Andréa Laizeau</h1>
-                    <p class="profession">Développeuse web front <br> et <br> community manager</p>
-                </div>
-                <!-- <nav>
-                    <ul class="nav_ul">
-                        <a href="">A propos</a>
-                        <a href="">Travaux</a>
-                        <a href="">Diplomes</a>
-                    </ul>
-                </nav> -->
-            </div>
-        </div>
+  <div class="bloc_accueil">
+    <div class="bloc_nav">
+      <div class="titre">
+        <br>
+        <h1 class="andrea">Andréa Laizeau</h1>
+        <p class="profession">Développeuse web front <br> et <br> community manager</p>
+      </div>
+      <nav>
+        <ul class="nav_ul">
+          <a class="nav_propos" href="">Me connaitre</a>
+          <a href="">Travaux</a>
+          <a class="nav_diplome" href="">Certifications</a>
+        </ul>
+      </nav>
     </div>
 
-    <!-- <div class="bloc_photo">
+    <!-- <div class="bloc_mots">
+            <p class="mots crea">Créative</p>
+            <p class="mots passion">Passion</p>
+            <p class="mots innov">Innovante</p>
+            <p class="mots deter">Déterminée</p>
+            <p class="mots construire">Construire</p>
+            <p class="mots autonome">Autonome</p>
+            <p class="mots nature">Nature</p>
+            </div>  -->
+    <div></div>
+  </div>
 
-    </div> -->
+<div class="me_connaitre">
+  <div class="bloc_profil">
+    <br><br><br><br>
+    <div class="profil">
 
-    <div class="bloc_travaux">
-        <h1 class="titre_travaux"> <mark>Travaux</mark></h1>
-        <br><br><br>
+      <div class="texte_profil">
 
-        <h2 class="titre_bloc">Site web -individuel</h2>
-        <div class="bloc_v1">
-            <div>
-              <a href="https://mb-osteopatheanimalier.com/" target="_blank"><img class="img_mbsite" src="./img/mb_site_web.jpg" alt=""></a> 
-            </div>
+        <p>Étant née et évoluant au sein de l'entreprise familiale, j’ai dédié mon temps à observer et à analyser la
+          gestion et la communication interne et externe au sein du centre équestre. <br> <br> Bien que je n'aie pas été
+          directement impliqué dans son fonctionnement, mes années d'observation m’ont appris beaucoup de choses
+          concernant le monde professionnel.</p>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">HTML</p>
-                    <p class="competence">CSS</p>
-                    <p class="competence">Figma</p>
-                </div>
-                <p class="texte_v1">Conçus 100% à la main. En passant par la création de la charte graphique jusqu’au choix
-                    de l’hébergeur.</p>
-            </div>
+        <img class="img_profil" src="./img/moi_profil.jpg" alt="">
 
+        <p>Etudiante en deuxième années de BUT Métiers du Multimédia et de l'Internet. Diplôme polyvalent qui m’offre les outils dont j’ai besoin dans la réalisation de mes projets <a href="matiere.html">voir les matières</a> </p>
+      </div>
+
+    </div>
+    <br><br><br>
+  </div>
+
+
+  <!-- SLIDER -->
+
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>Animaux</p>
+      <p class="slide_titre">Passionnée</p>
+      <p>Musique</p>
+    </div>
+    <div class="panel panel2">
+      <!-- moi tournage -->
+      <p>Audiovisuel</p>
+      <p class="slide_titre">Créatrice</p>
+      <p>Site web</p>
+    </div>
+    <div class="panel panel3">
+      <!-- équitation -->
+      <p>Projets</p>
+      <p class="slide_titre">Déterminer</p>
+      <p>Sports</p>
+    </div>
+    <div class="panel panel4">
+      <!-- voyage avion ? paysage ? -->
+      <p>Ouverte sur</p>
+      <p class="slide_titre">Le monde</p>
+      <p>*voyage*</p>
+    </div>
+    <div class="panel panel5">
+      <!-- moi souris pré rentrée -->
+      <p>A l'écoute</p>
+      <p class="slide_titre">Moi</p>
+      <p>???</p>
+    </div>
+  </div>
+
+  <script>
+    //Déclare les fonctions dont on a besoin
+    const panels = document.querySelectorAll('.panel');
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    //Ouverture du panel quand click
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+
+    //apparition des écrits en haut et en bas 
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>
+
+</div>
+
+
+
+  <div class="bloc_travaux">
+    <h1 class="titre_travaux"> Travaux</h1>
+    <br><br>
+
+    <h2 class="titre_bloc">Site web -individuel</h2>
+    <div class="bloc_v1">
+      <div>
+        <a href="https://mb-osteopatheanimalier.com/" target="_blank"><img class="img_mbsite"
+            src="./img/mb_site_web.jpg" alt=""></a>
+      </div>
+
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">HTML</p>
+          <p class="competence">CSS</p>
+          <p class="competence">Figma</p>
         </div>
-    
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Vidéos -individuel</h2>
-        <div class="bloc_v2">
-            <div>
-              <a href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS" target="_blank"><img class="img_mbvideo" src="./img/mb_video.JPG" alt=""></a> 
-            </div>
+        <p class="texte_mbsite">Conçus 100% à la main. En passant par la création de la charte graphique jusqu’au choix
+          de l’hébergeur.</p>
+      </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Adobe Premiere Pro</p>
-                </div>
-                <p class="texte_v2">Plusieurs réels qui ont pour but d’informer la communauté de Maëlys Bizet Ostéopathe Animalier des compétences qu’elle met en pratique pour apporter du bien-être aux animaux.</p>
-            </div>
+    </div>
+
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Vidéos -individuel</h2>
+    <div class="bloc_v2">
+      <div>
+        <a href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS" target="_blank"><img
+            class="img_mbvideo" src="./img/mb_video.JPG" alt=""></a>
+      </div>
+
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Adobe Premiere Pro</p>
         </div>
+        <p class="texte_mbvideo">Plusieurs réels qui ont pour but d’informer la communauté de Maëlys Bizet Ostéopathe
+          Animalier des compétences qu’elle met en pratique pour apporter du bien-être aux animaux.</p>
+      </div>
+    </div>
 
-          
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Motion design -équipe x5</h2>
-        <div class="bloc_v1">
-            <div>
-              <a href="" target="_blank"><img class="img_mbsite" src="./img/mb_site_web.jpg" alt=""></a> 
-            </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Adobe After Effects </p>
-                </div>
-                <p class="texte_v1">Afin de sensibiliser les lecteurs à la cause animale, nous avons créés cette vidéo dans le cadre d’une refont de la communication digital d’un refuge animalier.</p>
-            </div>
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Motion design -équipe x5</h2>
+    <div class="bloc_v1">
+      <div>
+        <a href="https://youtu.be/1VAf3Epv2B8" target="_blank"><img class="img_carre" src="./img/motion_design.jpg"
+            alt=""></a>
+      </div>
+
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Adobe After Effects </p>
         </div>
-        
+        <p class="texte_motion">Afin de sensibiliser les lecteurs à la cause animale, nous avons créés cette vidéo dans
+          le cadre d’une refont de la communication digital d’un refuge animalier.</p>
+      </div>
+    </div>
 
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Stratégie éditorial -équipe x2</h2>
-        <div class="bloc_v2">
-            <div>
-              <a href="https://www.mindmeister.com/app/map/2752765894?t=GQQWxFqD5p" target="_blank"><img class="img_refuge_strat" src="./img/strategie_editorial.jpg" alt=""></a> 
-            </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Mindmeister</p>
-                </div>
-                <p class="texte_v2">Pour mener à bien le projet de la refont de communication digital du refuge animalier, nous avons créée une carte mental qui rassemble tout les éléments dont nous avons eu besoin.</p>
-            </div>
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Stratégie éditorial -équipe x2</h2>
+    <div class="bloc_v2">
+      <div>
+        <a href="https://www.mindmeister.com/app/map/2752765894?t=GQQWxFqD5p" target="_blank"><img
+            class="img_refuge_strat" src="./img/strategie_editorial.jpg" alt=""></a>
+      </div>
+
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Mindmeister</p>
         </div>
+        <p class="texte_strat">Pour mener à bien le projet de la refont de communication digital du refuge animalier,
+          nous avons créée une carte mental qui rassemble tout les éléments dont nous avons eu besoin.</p>
+      </div>
+    </div>
 
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Linguavers -équipe x2</h2>
-        <div class="bloc_v1">
-            <div>
-              <a href="" target="_blank"><img class="img_linguavers" src="./img/linguavers.jpg" alt=""></a> 
-            </div>
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Linguavers -équipe x2</h2>
+    <div class="bloc_v1">
+      <div>
+        <a href="" target="_blank"><img class="img_carre" src="./img/linguavers.jpg" alt=""></a>
+      </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Marketing</p>
-                </div>
-                <p class="texte_linguavers">Une matinée. C’est le temps qu’il nous a fallut pour créer une start-up fictive.</p>
-            </div>
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Marketing</p>
         </div>
+        <p class="texte_linguavers">Une matinée. C’est le temps qu’il nous a fallut pour créer une start-up fictive.</p>
+      </div>
+    </div>
 
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Refont Disneyland -individuel</h2>
-        <div class="bloc_v2">
-            <div>
-              <a href="https://www.figma.com/file/nfqR67be0sa5FMDhCW0yyN/Refont_disney?type=design&node-id=0%3A1&mode=design&t=OnTEgWVMIOQzgkap-1" target="_blank"><img class="img_disney" src="./img/disney2.png" alt=""></a> 
-            </div>
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Refont Disneyland -individuel</h2>
+    <div class="bloc_v2">
+      <div>
+        <a href="https://www.figma.com/file/nfqR67be0sa5FMDhCW0yyN/Refont_disney?type=design&node-id=0%3A1&mode=design&t=OnTEgWVMIOQzgkap-1"
+          target="_blank"><img class="img_disney" src="./img/disney2.png" alt=""></a>
+      </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Figma</p>
-                </div>
-                <p class="texte_v2">Retournez en enfance à travers cet univers magique. J'ai ramené la magie de mon enfance en transformant Disneyland en un univers noir et blanc.</p>
-            </div>
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Figma</p>
         </div>
+        <p class="texte_disney">Retournez en enfance à travers cet univers magique. J'ai ramené la magie de mon enfance
+          en transformant Disneyland en un univers noir et blanc.</p>
+      </div>
+    </div>
 
-        <br><br><br>
-        <div class="ligne"></div>
-        <br><br><br>
-        <h2 class="titre_bloc">Podcast -individuel</h2>
-        <div class="bloc_v1">
-            <div>
-              <a href="https://drive.google.com/file/d/1bQU2LqSpbe0EaQN7oUC2Z1bkbkn3DFbi/view" target="_blank"><img class="img_linguavers" src="./img/Podcast affiche.jpg" alt=""></a> 
-            </div>
+    <br><br><br>
+    <div class="ligne"></div>
+    <br><br><br>
+    <h2 class="titre_bloc">Podcast -individuel</h2>
+    <div class="bloc_v1">
+      <div>
+        <a href="https://drive.google.com/file/d/1bQU2LqSpbe0EaQN7oUC2Z1bkbkn3DFbi/view" target="_blank"><img
+            class="img_carre" src="./img/Podcast affiche.jpg" alt=""></a>
+      </div>
 
-            <div class="div_texte">
-                <div class="bouton">
-                    <p class="competence">Adobe Audition</p>
-                </div>
-                <p class="texte_linguavers">Créer un monde fictif en le rendant le plus réel possible. C’était mon but !</p>
-            </div>
+      <div class="div_texte">
+        <div class="bouton">
+          <p class="competence">Adobe Audition</p>
         </div>
+        <p class="texte_podcast">Créer un monde fictif en le rendant le plus réel possible. C’était mon but !</p>
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  <!-- DIPLOMES -->
+  <div class="bloc_diplome">
+    <h1 class="titre_travaux">Certifications</h1>
+    <br><br><br>
+
+    <div class="certification">
+
+      <div class="contenu_cert">
+        <div>
+          <a href=""><img class="logo_certif" src="./img/permis.jpeg" alt=""></a> 
+        </div>
+        <div class="texte_cert">
+          <h2 class="titre_certif">Permis B</h2>
+          <p class="soustitre_certif">Agence nationale des titres sécurisés - ANTS</p>
+        </div>
+      </div>
+
+      <div class="contenu_cert">
+        <div>
+          <a href=""><img class="logo_certif" src="./img/psc1.png" alt=""></a> 
+        </div>
+        <div class="texte_cert">
+          <h2 class="titre_certif">PSC1 -Prévention Secours Civique Niveau 1</h2>
+          <p class="soustitre_certif">Protection Civile française</p>
+        </div>
+      </div>
+
+      <div class="contenu_cert">
+        <div>
+          <a href=""><img class="logo_certif" src="./img/ffe.jpg" alt=""></a> 
+        </div>
+        <div class="texte_cert">
+          <h2 class="titre_certif">Galop 7 -Maîtrise Avancée en Équitation</h2>
+          <p class="soustitre_certif">Fédération Française d'Equitation</p>
+        </div>
+      </div>
+      
+
+     
+
+
+    </div>
 <br><br>
-    </div>
+  </div>
+
+
+
+
 
 
 </body>

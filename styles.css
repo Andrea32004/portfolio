@@ -1,3 +1,7 @@
+/* Ajouter effet de zoom sur image lien */
+/* quand la souris passe sur le backround image = plus flou */
+
+
 @font-face {
   font-family: 'italiano';
   src: url('typo/italianno.regular.ttf') format('truetype');
@@ -7,13 +11,6 @@
   font-style: normal;
 }
 
-/* surlignement */
-mark {
-  background-color: #bf88bc57;
-  /* width: 212px; */
-  height: 93px;
-  /* display: inherit;  */
-}
 
 .ligne{
   border: black dashed 1px;
@@ -26,6 +23,7 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;  
   background-color: #f1f1f163;
+  height: 100vw;
 }
 
 *,
@@ -35,6 +33,45 @@ body{
   margin: 0;
 }
 
+/* MATIERES */
+.titre_matiere{
+  text-align: center;
+  margin: auto;
+  font-family: "italiano";
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.bloc_matiere{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.matiere{
+  text-align: center;
+}
+
+.img_calendrier{
+  width: 30vw;
+  object-fit: contain;
+  min-width: 448px;
+}
+
+.matiere_autre{
+  align-items: center;
+
+}
+
+.matiere_contour{
+  border-style : solid ;
+  border-width : 10px ;
+  border-image : linear-gradient(#381F31, #F29BAB, #BF88BC, #7977A6) 1;
+}
+
+
+
+/* ------- */
 
 .bloc_accueil{
   background-image: url(./img/accueil_fond.jpg);
@@ -45,48 +82,51 @@ body{
   height: 110vh;
 }
 
-.bloc1{
-  display: flex;
+.bloc_accueil:hover {
+  filter: blur(0);
 }
 
 .bloc_nav{
   display: flex;
-  margin-top: 38px;
-  /* gap: 145px; ici ce n'est pas responsive*/
+  /* gap: 107px; */
 }
-/* dimensionner la boite <nav> puis centrer ou faire gap sur .bloc_nav */
+
 
 nav{
-  margin-left: 57px;
-  background-color: #ffffff;
-  height: 100px;
+  display: flex;
+  width: 50%;
+  height: 61px;
+  backdrop-filter: blur(500px);
+  -moz-backdrop-filter: blur(500px);
+  backdrop-filter: blur(500px);
 }
 
 .nav_ul{
   display: flex;
-  gap: 50px;
+  gap: 115px;
+margin: auto;
 }
 
 .nav_ul a{
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: row;
-
+  color: white;
+ text-align: center;
+  margin: auto;
 }
+
 
 .titre{
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #ffffff;
-  margin-left: 57px;
   gap: 20px;
+  width: 50%;
 }
 
 .andrea{
   font-family: "italiano";
-  font-size: 6.5rem;
+  font-size: 7rem;
+  font-weight: 500;
 }
 
 .profession{
@@ -99,14 +139,216 @@ nav{
   display: flex;
 }
 
-/* DEGRADER */
-/* .bloc_photo{
-  height: 90vh;
-  background: linear-gradient(#381F31, #F29BAB, #BF88BC,#7977A6);
+.bloc_mots{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  float: right;
+}
+
+.mots{
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: 700;
+
+  -webkit-transition: all 100ms ease-out;
+  -moz-transition: all 100ms ease-out;
+  -o-transition: all 100ms ease-out;
+  -ms-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+
+  transition-delay: 0s;
+  transition-duration: 1s
+}
+
+.crea{
+  margin-top: -71px;
+  margin-right: 512px;
+  color: blue;
+}
+
+.passion{
+  margin-top: 36px;
+  margin-left: 377px;
+  color: #FFACD9FF;
+  width: 128px;
+}
+
+.deter{
+  margin-left: 322px;
+  margin-top: 34px;
+  color: white;
+  width: 196px;
+}
+
+.construire{
+  margin-left: -214px;
+  margin-top: -86px;
+  color: #FAF400FF;
+  width: 170px;
+}
+
+.autonome{
+  margin-left: -469px;
+  color: #730000FF;
+  width: 180px;
+}
+
+.nature{
+  margin-left: -99vh;
+  margin-top: -178px;
+  color: #004400FF;
+  width: 110px;
+}
+
+.innov{
+  color: #163D3EFF;
+  width: 165px;
+}
+
+.mots:hover{
+  opacity: 1;
+
+}
+
+/* PROFIL */
+.me_connaitre{
+  border-bottom: #22212d 10px solid;
+  border-right:#22212d 10px solid;
+  border-left:#22212d 10px solid;
+
+}
+
+
+.profil{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.img_profil{
+  object-fit: cover;
+  width: 220px;
+  height: 220px;
+  border-radius: 111px;
+}
+
+
+.texte_profil{
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 46px;
+}
+
+
+
+
+/* SLIDER */
+
+.slider {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* l'ensemble du bloc des panels */
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  /* border: white solid 8px; */
+  /* flex-direction: column; */
+  
+}
+
+/* bloc d'un panel */
+.panel {
+  display: flex;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel1 { background-image:url(./img/slider_passion3.JPG); }
+.panel2 { background-image:url(./img/slider_creation.jpg); }
+.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+.panel4 { background-image:url(./img/slide_voyage.jpg); }
+.panel5 { background-image:url(./img/slide_danse.jpg); }
+
+/* Flex Children */
+/* border des écritures */
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+/* ICI CHANGE COULEUR CONTOUR ECRIT */
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* différencier écriture du haut à celle du bas = permet de faire l'effet */
+.panel > *:first-child { transform: translateY(-100%);}
+/* media querry : transform: translateX(0); */
+/* la class contenu "open-active" fera ces transformation */
+
+.panel.open-active > *:first-child { transform: translateY(0);}
+/* media query : transform: translateX(-100%); */
+
+.panel > *:last-child { transform: translateY(100%);}
+/*media query : transform: translateX(100%); */
+
+.panel.open-active > *:last-child { transform: translateY(0);}
+/* media query : transform: translateX(0); */
+
+/* 
+.panel p {
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+ font-size: 2em;
 } */
 
+/* grossi écriture titre */
+.panel p:nth-child(2) {
+  font-size: 4em;
+} 
 
+.panel.open {
+  /* la transition du 5temps */
+  flex:5;
+  font-size: 40px;
+}
 
+.slide_titre{
+  font-family: "italiano";
+  /* font-size: 5rem; */
+}
+
+/* SLIDER */
+@media (max-width: 1124px){
+  .panel p:nth-child(2) {
+    font-size: 3em;
+  }
+}
 
 
 
@@ -117,10 +359,21 @@ nav{
 
 .titre_travaux{
   font-family: "italiano";
-  font-size: 5rem;
+  font-weight: 500;
+  font-size: 7.5rem;
   padding-top: 52px;
   padding-left: 52px;
-  font-weight: 550;
+
+  /* dégarder */
+  display: inline-block;
+  background: linear-gradient(to right, #381F31, #F29BAB, #BF88BC, #7977A6 );
+    background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-text-stroke: 0.2px;
+-webkit-text-stroke-color: black;
 }
 
 
@@ -150,52 +403,63 @@ nav{
   border: #BF88BC solid 1px;
   border-radius: 30% / 50%;
   background-color: #bf88bc57;
+  /* background: linear-gradient(to left, #381F31, #F29BAB, #BF88BC, #7977A6 ); */
   padding: 5px;
   margin: auto;
 }
 
- .texte_v1, .texte_v2{
+.texte_motion, .texte_strat, .texte_disney, .texte_podcast, .texte_mbvideo, .texte_mbsite{
   /* display: flex; */
   align-items: center;
+  line-height: 28px;
 } 
 
 .bloc_v1, .bloc_v2{
   display: flex;
   width: 80%;
   margin: auto;
-  gap: 50px;
+  /* gap: 50px; */
   justify-content: space-around;
 } 
-
-
-/* v1 -> paysage, img à gauche
-v2 -> portrait, img à droite */
-
-.texte_v1{
-  width: 393px;
-}
-
-
-.texte_v2{
-  width: 586px;
-}
-
-.texte_linguavers{
-  width: 421px;
-}
 
 .bloc_v2{
   flex-direction: row-reverse;
 } 
 
 
+.texte_mbsite{
+  width: 410px;
+}
+
+.texte_mbvideo{
+  width: 560px;
+}
+
+.texte_motion{
+  width: 522px;
+}
+
+.texte_strat{
+  width: 549px;
+}
 
 
+.texte_linguavers{
+  width: 421px;
+}
+
+.texte_disney{
+  width: 472px;
+}
+
+.texte_podcast{
+  width: 421px;
+}
 
 .img_mbsite{
-  width: 46vw;
+  width: 40vw;
   object-fit: contain;
-  min-width: 448px;
+  min-width: 445px;
 }
 
 .img_mbvideo{
@@ -205,12 +469,12 @@ v2 -> portrait, img à droite */
 }
 
 .img_refuge_strat{
-  width: 31vw;
+  width: 11vw;
   object-fit: contain;
   min-width: 366px;
 }
 
-.img_linguavers{
+.img_carre{
   width: 24vw;
   object-fit: contain;
   min-width: 260px; 
@@ -220,4 +484,60 @@ v2 -> portrait, img à droite */
   width: 35vw;
   object-fit: contain;
   min-width: 448px;
+  /* box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); */
 }
+
+/* DIPLOME */
+.bloc_diplome{
+  border: #7977A6 10px solid;
+}
+
+
+.certification{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titre_certif{
+  font-size: 2.4rem;
+}
+
+.soustitre_certif{
+  font-weight: 300;
+  font-family: "italiano";
+  font-size: 2.1rem;
+}
+
+.logo_certif{
+  width: 100px;
+  padding-left: 34px;
+}
+
+.contenu_cert{
+  border: #7977A6 solid 2px;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  height: 119px;
+  gap: 32px;
+
+  transition: 0.3s;
+}
+
+.contenu_cert:hover{
+  background-color: #7977A6 ;
+  color: white;
+}
+
+.texte_cert{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
