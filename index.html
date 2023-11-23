@@ -31,12 +31,27 @@
       </div>
       <nav>
         <ul class="nav_ul">
-          <a class="nav_propos" href="">Me connaitre</a>
+          <a class="nav_propos" href="">Qui suis-je ?</a>
           <a href="">Travaux</a>
           <a class="nav_diplome" href="">Certifications</a>
         </ul>
       </nav>
+      <img class="menu" src="img/menu.png" alt="menu">
     </div>
+  
+    <script>
+      const menuHamburger = document.querySelector(".menu");
+      const navLinks = document.querySelector("nav");
+      const titreSection = document.querySelector(".titre");
+    
+      menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile_menu');
+        titreSection.classList.toggle('hide_title'); // Ajoutez cette ligne pour masquer/afficher la classe 'titre'
+      });
+
+    </script>
+
+<!-- .titre : display: none; -->
 
     
 
@@ -63,13 +78,14 @@
           gestion et la communication interne et externe au sein du centre équestre. <br> <br> Bien que je n'aie pas été
           directement impliqué dans son fonctionnement, mes années d'observation m’ont appris beaucoup de choses
           concernant le monde professionnel.</p>
-
+<div class="avec_img">
         <img class="img_profil" src="./img/moi_profil.jpg" alt="">
 
         <div class="texte_mmi">
-          <p>J'utilise tout les outils dont je dispose, grâce à mon expérience passées et à mon BUT Métiers du Multimédia et de l'Internet dans lequel j'étudie actuellement, pour mener à bien mes projets</p>
+          <p class="mmi_experience">J'utilise tout les outils dont je dispose, grâce à mon expérience passées et à mon BUT Métiers du Multimédia et de l'Internet dans lequel j'étudie actuellement, pour mener à bien mes projets</p>
           <div class="div_lien_matiere"><a class="lien_matiere" href="matiere.html">BUT MMI</a></div> 
         </div>
+      </div>
       </div>
 
     </div>
@@ -167,8 +183,13 @@
     <h2 class="titre_bloc">Vidéos -individuel</h2>
     <div class="bloc_v2">
       <div>
-        <a href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS" target="_blank"><img
-            class="img_mbvideo" src="./img/mb_video.JPG" alt=""></a>
+        <video controls width="200" height="450">
+          <source src="./img/video_mb.mp4" type="video/mp4">
+          <source src="./img/video_mb.webm" type="video/webm">
+          Vidéo : massage -ostéopathie animale
+        </video>
+         
+      
       </div>
 
       <div class="div_texte">
@@ -176,7 +197,8 @@
           <p class="competence">Adobe Premiere Pro</p>
         </div>
         <p class="texte_mbvideo">Plusieurs réels qui ont pour but d’informer la communauté de Maëlys Bizet Ostéopathe
-          Animalier des compétences qu’elle met en pratique pour apporter du bien-être aux animaux.</p>
+          Animalier des compétences qu’elle met en pratique pour apporter du bien-être aux animaux. <br>
+          <a class="lien_video" href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS" target="_blank">Voir l'ensemble des vidéos</a> </p>
       </div>
     </div>
 

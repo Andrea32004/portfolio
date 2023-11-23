@@ -1,6 +1,8 @@
+/* A FAIRE : */
+
 /* Ajouter effet de zoom sur image lien */
 /* quand la souris passe sur le backround image = plus flou */
-
+/* AJouter nav dans la page matière + planning */
 
 @font-face {
   font-family: 'italiano';
@@ -17,11 +19,11 @@
   width: 353px;
   margin: auto;
 }
-  
+
 
 body{
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;  
+  font-size: 1.25rem;
   background-color: #f1f1f163;
   height: 100vh;
 }
@@ -104,12 +106,17 @@ nav{
   display: flex;
   gap: 115px;
 margin: auto;
+padding-left: 0px;
 }
 
 .nav_ul a{
   color: white;
  text-align: center;
   margin: auto;
+}
+
+.menu{
+  display: none;
 }
 
 
@@ -229,6 +236,7 @@ margin: auto;
   width: 15.625vw;
   height: 15.625vw;
   border-radius: 111px;
+  margin: auto;
 }
 
 .texte_mmi{
@@ -267,10 +275,16 @@ margin: auto;
   gap: 46px;
 }
 
+.avec_img{
+  display: flex;
+  gap: 46px;
+}
+
 
 
 
 /* SLIDER */
+/* METTRE LES FONT SIZE EN REM */
 
 .slider {
   font-size: 20px;
@@ -286,10 +300,10 @@ margin: auto;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
-  /* border: white solid 8px; */
-  /* flex-direction: column; */
-  
+
 }
+
+
 
 /* bloc d'un panel */
 .panel {
@@ -344,7 +358,7 @@ margin: auto;
 .panel.open-active > *:last-child { transform: translateY(0);}
 /* media query : transform: translateX(0); */
 
-/* 
+/*
 .panel p {
   text-transform: uppercase;
   font-family: 'Amatic SC', cursive;
@@ -355,11 +369,12 @@ margin: auto;
 /* grossi écriture titre */
 .panel p:nth-child(2) {
   font-size: 4em;
-} 
+}
 
 .panel.open {
   /* la transition du 5temps */
   flex:5;
+  /* change titre quand panel ouvert "d&terminer"... */
   font-size: 40px;
 }
 
@@ -459,19 +474,34 @@ margin: auto;
 }
 
 .competence{
-  border: #BF88BC solid 1px;
-  border-radius: 30% / 50%;
-  background-color: #bf88bc57;
+  /* border: #BF88BC solid 1px;
+  border-radius: 30% / 50%; */
+  /* background-color: #bf88bc57; */
   /* background: linear-gradient(to left, #381F31, #F29BAB, #BF88BC, #7977A6 ); */
   padding: 7px;
   margin: auto;
+  font-size: 1.66rem;
+  font-weight: 600;
+
+    /* dégarder */
+    display: inline-block;
+    background: linear-gradient(to right, #381F31, #F29BAB, #BF88BC, #7977A6 );
+      background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-text-stroke: 0.15px;
+  -webkit-text-stroke-color: black;
+
+
 }
 
 .texte_motion, .texte_strat, .texte_disney, .texte_podcast, .texte_mbvideo, .texte_mbsite{
   /* display: flex; */
   align-items: center;
   line-height: 28px;
-} 
+}
 
 .bloc_v1, .bloc_v2, .bloc_mbsite, .bloc_motion{
   display: flex;
@@ -479,11 +509,11 @@ margin: auto;
   margin: auto;
   /* gap: 50px; */
   justify-content: space-around;
-} 
+}
 
 .bloc_v2{
   flex-direction: row-reverse;
-} 
+}
 
 
 .texte_mbsite{
@@ -492,6 +522,25 @@ margin: auto;
 
 .texte_mbvideo{
   width: 560px;
+}
+
+.lien_video{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: solid 2px #BF88BC;
+  padding: 4px;
+  color: black;
+  font-weight: 599;
+  /* font-size: 1.28rem; */
+  border-radius: 4px;
+  transition: 0.3s;
+  width: 272px;
+  float: right;
+}
+
+.lien_video:hover{
+  background-color: #BF88BC;
 }
 
 .texte_motion{
@@ -524,7 +573,7 @@ margin: auto;
 .img_mbvideo{
   width: 24vw;
   object-fit: contain;
-  min-width: 224px; 
+  min-width: 224px;
 }
 
 .img_refuge_strat{
@@ -536,7 +585,7 @@ margin: auto;
 .img_carre{
   width: 24vw;
   object-fit: contain;
-  min-width: 260px; 
+  min-width: 260px;
 }
 
 .img_disney{
@@ -604,9 +653,217 @@ margin: auto;
 
 @media (max-width: 970px){
   body{
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
   }
 }
+
+
+/* ACCUEIL */
+@media (max-width: 1178px){
+  .profession {
+    font-size: 1.8rem;
+    line-height: 40px;
+    margin-top: -10px;
+  }
+
+  .andrea {
+    font-size: 6rem;
+}
+
+.nav_ul{
+  gap: 70px;
+}
+}
+
+@media (max-width: 924px){
+  .nav_ul {
+    gap: 50px;
+  }
+
+  .profession {
+    font-size: 1.66rem;
+  }
+
+  .andrea {
+    font-size: 5.5rem;
+  }
+}
+
+
+@media (max-width: 864px){
+/* menu */
+  .nav_ul{
+    flex-direction: column;
+  }
+
+  nav{
+    height: 100vh;
+    width: 100%;
+
+    margin-left: -218%;
+
+    transition: all 0.5s ease;
+
+  /* SAFARI */
+  -webkit-backdrop-filter: blur(35px);
+
+  /* FIREFOX  */
+  -moz-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  }
+
+
+  .menu{
+    display: flex;
+    width: 27px;
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    z-index: 3;
+
+  }
+
+  .mobile_menu{
+    margin-left: 0;
+  }
+
+  .titre.hide_title {
+    display: none;
+  }
+
+
+/* ------- */
+  .bloc_accueil {
+    background-image: url(./img/accueil_fondflou_telephone2.jpg);
+    background-size: cover;
+  }
+
+  .titre{
+    width: 97%;
+    margin-top: 11px;
+  }
+}
+
+
+
+
+ @media (max-width: 667px){
+  .profession {
+    font-size: 1.4rem;
+  }
+
+  .andrea {
+    font-size: 5rem;
+  }
+
+  .nav_ul{
+      font-size: 1.05rem;
+      gap: 38px;
+  }
+}
+
+
+  /* telephone */
+@media (max-width: 450px){
+  .andrea{
+    font-size: 4.5rem;
+  }
+
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------*/
+
+/* PROFIL */
+@media (max-width: 1206px){
+  .texte_profil{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1134px){
+  .img_profil{
+    min-width: 178px;
+    min-height: 178px;
+  }
+
+  .texte_profil{
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px){
+  .texte_profil{
+    gap : 14
+  }
+}
+
+@media (max-width: 917px){
+  .texte_profil{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .avec_img{
+    gap: 22px;
+  }
+
+  .mmi_experience {
+    margin-top: 12px;
+  }
+
+}
+
+@media (max-width: 709px){
+ .texte_profil{
+    gap: 33px;
+  }
+
+  .mmi_experience {
+    margin-top: 0px;
+  }
+
+  .texte_mmi{
+    gap: 22px;
+  }
+
+}
+
+@media (max-width: 634px){
+  .texte_profil {
+    font-size: 1rem;
+  }
+}
+
+ @media (max-width: 691px){
+  .avec_img {
+    gap: 33px;
+  }
+
+  .img_profil {
+    min-width: 160px;
+    min-height: 160px;
+  }
+
+  .avec_img {
+    gap: 17px;
+  }
+}
+
+@media (max-width: 533px){
+  .img_profil {
+    min-width: 137px;
+    min-height: 137px;
+  }
+
+  .lien_matiere{
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------*/
 
 /* SLIDER */
 @media (max-width: 1124px){
@@ -615,8 +872,19 @@ margin: auto;
   }
 }
 
+/* @media (max-width: 928px){
+  .panel p:nth-child(2) {
+    font-size: 2.3em;
+  }
+} */
+
+/* .panels{
+  flex-direction: column;
+} */
 
 
+
+/* ----------------------------------------------------------------------------------------------------------------------------*/
 /* TRAVAUX */
 @media (max-width: 1211px){
   .bloc_v2{
@@ -635,33 +903,21 @@ margin: auto;
   }
 }
 
-
-
-/* PROFIL */
-@media (max-width: 1206px){
-  .texte_profil{
-    font-size: 1.2rem; 
-  }
-}
-
-@media (max-width: 1134px){
-  .img_profil{
-    min-width: 178px;
-    min-height: 178px;
-  }
-
-  .texte_profil{
-    font-size: 1.1rem; 
-  }
-}
-
-@media (max-width: 1024px){
-  .texte_profil{
-    gap : 14
+@media (max-width: 968px){
+  .lien_video{
+    margin-right: 16px;
+    width: 237px;
+    padding: 1px;
+    margin-top: 10px;
   }
 }
 
 
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------------------------------------------*/
 /* DIPLOME */
 @media (max-width: 1172px){
   .titre_certif{
