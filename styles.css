@@ -78,24 +78,40 @@ body{
 
 .bloc_accueil{
   background-image: url(./img/accueil_fond.jpg);
-  /* background-image: url(./img/accueil_fond_original.jpg); */
+   /* background-image: url(./img/accueil_fond_original.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 110vh;
 
-}
+} 
+
+
+
+/* .blur {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  filter: blur(8px);
+  z-index: -1;
+} */
+
+
 
 .bloc_nav{
   display: flex;
-  /* gap: 107px; */
+  gap: 110px;
+  justify-content: center;
 }
 
 
 nav{
   display: flex;
-  width: 50%;
+  /* width: 128%; */
   height: 61px;
   backdrop-filter: blur(500px);
   -moz-backdrop-filter: blur(500px);
@@ -120,13 +136,24 @@ padding-left: 0px;
 }
 
 
+/* ICINEW */
+
+.bloc_titre_bouton{
+  display: block;
+}
+
+.boutons_telephone_cv{
+  display: none;
+}
+
 .titre{
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #ffffff;
   gap: 20px;
-  width: 50%;
+  /* width: 50%; */
+
 }
 
 .andrea{
@@ -139,6 +166,60 @@ padding-left: 0px;
   font-size: 2rem;
   line-height: 40px
 }
+
+.bloc_nav_bouton{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 41px;
+}
+
+
+/* .div_bouton_cvvideo{
+  margin-left: 893px;
+  margin-top: 201px;
+  width: 137px;
+} */
+
+.boutons_cv{
+  display: flex;
+  /* position: absolute; */
+  justify-content: center;
+  align-items: center;
+  gap: 172px;
+  /* margin-left: 927px;
+  margin-top: 201px; */
+}
+/* 
+.div_bouton_cv{
+  margin-left: 1064px;
+    margin-top: 201px;
+  width: 110px;
+}
+
+.div_bouton_cvvideo, .div_bouton_cv{
+  text-align: center;
+  position: absolute;
+  display: flex;
+} */
+
+.bouton_cvvideo, .bouton_cv{
+  position: absolute;
+  border: solid 2px #730606;
+  color: black;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  padding: 5px;
+
+  transition: 0.3s;
+}
+
+.bouton_cv:hover{
+  background-color: #730606 ;
+  color: white;
+}
+
 
 /* PROFIL */
 .me_connaitre{
@@ -251,7 +332,9 @@ padding-left: 0px;
 .panel2 { background-image:url(./img/slider_creation.jpg); }
 .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
 .panel4 { background-image:url(./img/slide_voyage.jpg); }
-.panel5 { background-image:url(./img/slide_danse.jpg); }
+.panel5 { background-image:url(./img/slide_danse.jpg);
+  /* .panel5 { background-image:url(./img/028.JPG); */
+}
 
 /* Flex Children */
 /* border des écritures */
@@ -352,6 +435,11 @@ padding-left: 0px;
   min-width: 400px
 }
 
+.taille_video_mb{
+  width: 21vw;
+  height: 450px;
+  min-width: 278px
+}
 
 .titre_travaux{
   font-family: "italiano";
@@ -620,16 +708,22 @@ padding-left: 0px;
 
 
 @media (max-width: 864px){
+  .bloc_nav{
+  display: block;
+  }
 /* menu */
+   .boutons_cv{
+    display: none;
+  } 
   .nav_ul{
     flex-direction: column;
   }
 
   nav{
-    height: 100vh;
-    width: 100%;
+    height: 80vh;
+    width: 200%;
 
-    margin-left: -218%;
+    margin-left: -537%;
 
     transition: all 0.5s ease;
 
@@ -639,6 +733,7 @@ padding-left: 0px;
   /* FIREFOX  */
   -moz-backdrop-filter: blur(35px);
   backdrop-filter: blur(35px);
+  margin-top: 55px;
   }
 
 
@@ -669,8 +764,20 @@ padding-left: 0px;
 
   .titre{
     width: 97%;
-    margin-top: 11px;
   }
+
+  .boutons_telephone_cv{
+    display: flex;
+    gap: 170px;
+    width: 222px;
+  }
+
+  .bloc_titre_bouton{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: center;
+  } 
 }
 
 
@@ -824,6 +931,11 @@ padding-left: 0px;
 
 /* ----------------------------------------------------------------------------------------------------------------------------*/
 /* TRAVAUX */
+@media (max-width: 672px) {
+body {
+  font-size: 1.1rem;
+}
+}
 
 /* titre */
 @media (max-width: 1263px) {
@@ -851,15 +963,24 @@ padding-left: 0px;
 }
 
 
-@media (max-width: 1084px){
-  .bloc_motion{
-    gap: 30px;
-  }
-}
 
 @media (max-width: 1084px){
   body {
     font-size: 1.15rem;
+  }
+
+  .bloc_travaux {
+    border: #BF88BC 7px solid;
+  }
+
+  .me_connaitre {
+    border-bottom: #730606 5px solid;
+    border-right: #730606 5px solid;
+    border-left: #730606 5px solid;
+  }
+
+  .bloc_motion{
+    gap: 30px;
   }
 }
 
@@ -895,6 +1016,7 @@ padding-left: 0px;
     gap: 33px;
   }
 
+
   .competence{
     font-size: 1.5rem;
   }
@@ -903,11 +1025,96 @@ padding-left: 0px;
     padding-top: 8px;
     font-size: 6.3rem;
   }
+
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_podcast {
+    width: 498px;
+  }
+
+  .bloc_accueil{
+    height: 88vh;
+  
+  } 
+  
+
 }
+
 
 @media (max-width: 642px){
   body{
     font-size: 1.1rem;
+  }
+
+  .titre_travaux {
+    font-size: 6rem;
+  }
+
+  .bloc_travaux {
+    border: #BF88BC 5px solid;
+  }
+}
+
+
+@media (max-width: 548px){
+  body{
+    font-size: 1rem;
+  }
+}
+
+
+/* ici */
+/* téléphone */
+@media (max-width: 589px){
+  .bloc_travaux {
+    border: #BF88BC 3px solid;
+  }
+
+  .titre_bloc{
+    font-size: 2.8rem;
+
+  }
+
+  .competence{
+    font-size: 1.1rem;
+  }
+
+  .taille_video_interview, .taille_video_refont, .taille_motion{
+    height: 228px;
+    min-width: 303px;
+  }
+
+  .taille_video_mb{
+    min-width: 218px;
+    height: auto;
+  }
+
+  .img_mbsite {
+    min-width: 328px;
+  }
+
+  .img_refuge_strat{
+    min-width: 231px;
+  }
+
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_podcast {
+    width: 327px;
+    line-height: normal;
+  }
+
+
+  .ligne{
+    width: 185px;
+  }
+
+  .titre_bloc{
+    padding-bottom: 5px;
+  }
+
+  .titre_travaux{
+    font-size: 5rem;
+  }
+
+  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1 {
+    gap: 20px;
   }
 }
 

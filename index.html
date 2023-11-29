@@ -1,6 +1,8 @@
 <!-- 
-  faire version télélphone "travaux" taille img
-  commencer gsap
+  version télélphone : réduire la taille des interlignes du texte dans travaux 
+  changer photo "moi"
+  améliorer l'espace entre les élements des bloc dans travaux 
+  "certification" taille titre  
  -->
 
 <!DOCTYPE html>
@@ -27,13 +29,22 @@
 
 <body>
  
-  <div class="bloc_accueil">
+  <div class="bloc_accueil" id="blocAccueil">
+    <!-- <div class="blur"> -->
     <div class="bloc_nav">
-      <div class="titre">
-        <br>
-        <h1 class="andrea">Andréa Laizeau</h1>
-        <p class="profession">Développeuse web front <br> et <br> community manager</p>
+      <div class="bloc_titre_bouton">
+        <div class="titre">
+          <br>
+          <h1 class="andrea">Andréa Laizeau</h1>
+          <p class="profession">Développeuse web front <br> et <br> community manager</p>
+        </div>
+        <div class="boutons_telephone_cv">
+          <div class="div_bouton_cvvideo"><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
+          <div class="div_bouton_cv"><a class="bouton_cv" href="">CV</a></div> 
+        </div>
       </div>
+
+      <div class="bloc_nav_bouton">
       <nav>
         <ul class="nav_ul">
           <a class="nav_propos" href="">Qui suis-je ?</a>
@@ -41,7 +52,15 @@
           <a class="nav_diplome" href="">Certifications</a>
         </ul>
       </nav>
+      <div class="boutons_cv">
+        <div class="div_bouton_cvvideo"><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
+        <div class="div_bouton_cv"><a class="bouton_cv" href="">CV</a></div> 
+      </div>
+    </div>
+
       <img class="menu" src="img/menu.png" alt="menu">
+      
+    <!-- </div> -->
     </div>
   
     <script>
@@ -51,11 +70,23 @@
     
       menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile_menu');
-        titreSection.classList.toggle('hide_title'); // Ajoutez cette ligne pour masquer/afficher la classe 'titre'
+        titreSection.classList.toggle('hide_title'); 
       });
 
     </script>
 
+<!-- défloutage -->
+<!-- <script>
+  const blocAccueil = document.getElementById('blocAccueil');
+  const pseudoElement = window.getComputedStyle(blocAccueil, '::before');
+  
+  blocAccueil.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth - 0.5;
+    const mouseY = e.clientY / window.innerHeight - 0.5;
+    const blurValue = Math.sqrt(mouseX ** 2 + mouseY ** 2) * 10;
+    pseudoElement.style.filter = `blur(${blurValue}px)`;
+  });
+</script> -->
 
   </div>
 <div class="me_connaitre">
@@ -96,13 +127,13 @@
     <div class="panel panel2">
       <!-- moi tournage -->
       <p class="audio">Audiovisuel</p>
-      <p class="slide_titre">Créatrice</p>
+      <p class="slide_titre">Créative</p>
       <p class="site">Site web</p>
     </div>
     <div class="panel panel3">
       <!-- équitation -->
       <p class="sport">Sports</p>
-      <p class="slide_titre">Déterminer</p>
+      <p class="slide_titre">Déterminée</p>
       <p class="projet">Projets</p>
       
     </div>
@@ -197,7 +228,7 @@
     <h2 class="titre_bloc">Vidéos -individuel</h2>
     <div class="bloc_v2">
       <div>
-        <video controls width="300" height="450" poster="./img/mb_video.JPG">
+        <video class="taille_video_mb" controls poster="./img/mb_video.JPG">
           <source src="./img/video_mb.mp4" type="video/mp4">
           <source src="./img/video_mb.webm" type="video/webm">
           Vidéo : massage -ostéopathie animale
@@ -272,7 +303,7 @@
     <br><br><br>
     <div class="ligne"></div>
     <br><br><br>
-    <h2 class="titre_bloc">Refonte Disneyland -individuel</h2>
+    <h2 class="titre_bloc">Disneyland -individuel</h2>
     <div class="bloc_v2">
         <video class="taille_video_refont" controls autoplay>
           <source src="./img/video_refonte_disney.mp4" type="video/mp4">
