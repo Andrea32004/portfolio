@@ -187,7 +187,7 @@ padding-left: 0px;
 
 
 .bouton_cvvideo, .bouton_cv{
-  border: solid 2px #8F77A7;
+  border: solid 2px #603645;
   color: black;
   font-weight: 500;
   font-size: 1.6rem;
@@ -198,12 +198,12 @@ padding-left: 0px;
 }
 
 .bouton_cv:hover{
-  background-color: #8F77A7 ;
+  background-color: #603645 ;
   color: white;
 }
 
 .bouton_cvvideo:hover{
-  background-color: #8F77A7 ;
+  background-color: #603645 ;
   color: white;
 }
 
@@ -574,31 +574,48 @@ padding-left: 0px;
   width: 40vw;
   object-fit: contain;
   min-width: 426px;
+  transition: transform .3s, box-shadow .3s;
 }
 
-.img_mbvideo{
-  width: 24vw;
-  object-fit: contain;
-  min-width: 224px;
+.img_mbsite:hover{
+  -ms-transform: scale(1.2); /* IE 9 */
+-webkit-transform: scale(1.2); /* Safari 3-8 */
+transform: scale(1.2);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 .img_refuge_strat{
   width: 26vw;
   object-fit: contain;
   min-width: 261px;
+  transition: transform .3s, box-shadow .3s;
 }
+
+.img_refuge_strat:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 
 .img_carre{
   width: 24vw;
   object-fit: contain;
   min-width: 260px;
+  transition: transform .3s, box-shadow .3s;
 }
 
-.img_disney{
-  width: 35vw;
-  object-fit: contain;
-  min-width: 382px;
+.img_carre:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
 
 /* DIPLOME */
 .bloc_diplome{

@@ -1,14 +1,25 @@
-//accueil
-gsap.set('.profession', {text: ''})
-const tl = gsap.timeline()
+//Largeur de l'écran = animation responsive ordi + téléphone
+// Obtenez la largeur de l'écran
+const largeurEcran = window.innerWidth;
 
-tl.to('.profession', { 
-    text : 'Développeuse web front et community manager',
-    duration: 4.3
-})
+// Définissez les variables en fonction de la largeur de l'écran
+const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajustez les valeurs selon vos besoins
+
+
+
+
+//accueil
+// gsap.set('.profession', {text: ''})
+// const tl = gsap.timeline()
+
+// tl.to('.profession', { 
+//     text : 'Développeuse web front et community manager',
+//     duration: 4.3
+// })
 
 
 //profil
+//pose problème sur télélphone
 gsap.from('.img_profil', {
     scrollTrigger: {
         trigger: '.texte_profil',
@@ -22,10 +33,11 @@ gsap.from(".texte_histoire", {
     scrollTrigger: {
         trigger: '.texte_profil',
         start: 'top 80%',
+        debug: true,
       },
   rotation: 10, 
-         x: -600, 
-         duration: 3,
+         x: xValeur, 
+         duration: 1,
         });
 
 gsap.from(".texte_mmi", {
@@ -34,13 +46,20 @@ gsap.from(".texte_mmi", {
         start: 'top 80%',
       },
   rotation: 10, 
-         x: 600, 
-         duration: 3,
-      stagger: 20
+         x: xValeur, 
+         duration: 1,
         });
 
 
-
+//cliquez sur l'image pour voir le projet
+// gsap.from('.img_mbsite', {
+//     scrollTrigger: {
+//         trigger: '.img_mbsite',
+//         start: 'top 80%',
+//       },
+//     opacity: 0,
+//     duration: 10,
+// }) 
 
 
 //travaux
