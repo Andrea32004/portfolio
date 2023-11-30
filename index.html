@@ -1,8 +1,10 @@
 <!-- 
-  version télélphone : réduire la taille des interlignes du texte dans travaux 
+  - version télélphone : réduire la taille des interlignes du texte dans travaux 
   changer photo "moi"
-  améliorer l'espace entre les élements des bloc dans travaux 
-  "certification" taille titre  
+  - créer pop up contact en bas à droite
+  - zoom sur lien quand souris vient
+  - Gsap écriture page accueil
+            <p> 0601291288 <br> andrea.laizeau@gmail.com</p>
  -->
 
 <!DOCTYPE html>
@@ -25,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
+  <script defer type="module" src="index.js"></script>
 </head>
 
 <body>
@@ -95,11 +98,12 @@
     <div class="profil">
 
       <div class="texte_profil">
-
+        <div class="texte_histoire">
         <p>Étant née et évoluant au sein de l'entreprise familiale, j’ai dédié mon temps à observer et à analyser la
           gestion et la communication interne et externe au sein du centre équestre. <br> <br> Bien que je n'aie pas été
           directement impliqué dans son fonctionnement, mes années d'observation m’ont appris beaucoup de choses
           concernant le monde professionnel.</p>
+          </div>
 <div class="avec_img">
         <img class="img_profil" src="./img/moi_profil.jpg" alt="">
 
@@ -176,7 +180,7 @@
 
 
 
-  <div class="bloc_travaux">
+  <div class="bloc_travaux animation">
     <h1 class="titre_travaux"> Travaux</h1>
     <br><br>
 
@@ -248,7 +252,7 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Stratégie éditorial -équipe x5</h2>
-    <div class="bloc_v2">
+    <div class="bloc_stratedi">
       <div>
         <a href="https://www.mindmeister.com/app/map/2752765894?t=GQQWxFqD5p" target="_blank"><img
             class="img_refuge_strat" src="./img/strategie_editorial.jpg" alt=""></a>
@@ -304,7 +308,7 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Disneyland -individuel</h2>
-    <div class="bloc_v2">
+    <div class="bloc_disney">
         <video class="taille_video_refont" controls autoplay>
           <source src="./img/video_refonte_disney.mp4" type="video/mp4">
           <source src="./img/video_refonte_disney.webm" type="video/webm">
@@ -325,7 +329,7 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Podcast -individuel</h2>
-    <div class="bloc_v1">
+    <div class="bloc_podcast">
       <div>
         <a href="https://drive.google.com/file/d/1bQU2LqSpbe0EaQN7oUC2Z1bkbkn3DFbi/view" target="_blank"><img
             class="img_carre" src="./img/Podcast affiche.jpg" alt=""></a>
@@ -385,8 +389,14 @@
     </div>
 <br><br>
   </div>
-
-
 </body>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- scroll -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- texte -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
 </html>

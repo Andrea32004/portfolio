@@ -104,8 +104,7 @@ body{
 
 .bloc_nav{
   display: flex;
-  gap: 110px;
-  justify-content: center;
+    justify-content: center;
 }
 
 
@@ -140,6 +139,7 @@ padding-left: 0px;
 
 .bloc_titre_bouton{
   display: block;
+  width: 50%;
 }
 
 .boutons_telephone_cv{
@@ -169,54 +169,41 @@ padding-left: 0px;
 
 .bloc_nav_bouton{
   display: flex;
-  width: 50%;
   flex-direction: column;
   gap: 41px;
+  width: 50%;
 }
 
-
-/* .div_bouton_cvvideo{
-  margin-left: 893px;
-  margin-top: 201px;
-  width: 137px;
-} */
 
 .boutons_cv{
   display: flex;
   /* position: absolute; */
   justify-content: center;
   align-items: center;
-  gap: 172px;
+  gap: 52px;
   /* margin-left: 927px;
   margin-top: 201px; */
 }
-/* 
-.div_bouton_cv{
-  margin-left: 1064px;
-    margin-top: 201px;
-  width: 110px;
-}
 
-.div_bouton_cvvideo, .div_bouton_cv{
-  text-align: center;
-  position: absolute;
-  display: flex;
-} */
 
 .bouton_cvvideo, .bouton_cv{
-  position: absolute;
-  border: solid 2px #730606;
+  border: solid 2px #8F77A7;
   color: black;
   font-weight: 500;
   font-size: 1.6rem;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 5px;
 
   transition: 0.3s;
 }
 
 .bouton_cv:hover{
-  background-color: #730606 ;
+  background-color: #8F77A7 ;
+  color: white;
+}
+
+.bouton_cvvideo:hover{
+  background-color: #8F77A7 ;
   color: white;
 }
 
@@ -506,7 +493,7 @@ padding-left: 0px;
   line-height: 28px;
 }
 
-.bloc_v1, .bloc_v2, .bloc_mbsite, .bloc_motion, .bloc_interview{
+.bloc_v1, .bloc_v2, .bloc_mbsite, .bloc_motion, .bloc_interview, .bloc_stratedi, .bloc_disney, .bloc_podcast{
   display: flex;
   width: 80%;
   margin: auto;
@@ -514,7 +501,7 @@ padding-left: 0px;
   justify-content: space-around;
 }
 
-.bloc_v2, .bloc_interview{
+.bloc_v2, .bloc_interview, .bloc_stratedi, .bloc_disney{
   flex-direction: row-reverse;
 }
 
@@ -768,15 +755,15 @@ padding-left: 0px;
 
   .boutons_telephone_cv{
     display: flex;
-    gap: 170px;
-    width: 222px;
+    gap: 43px;
   }
 
   .bloc_titre_bouton{
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 60px;    
     align-items: center;
+    width: 100%;
   } 
 }
 
@@ -795,6 +782,10 @@ padding-left: 0px;
   .nav_ul{
       font-size: 1.05rem;
       gap: 38px;
+  }
+
+  .bouton_cvvideo, .bouton_cv {
+    font-size: 1.3rem;
   }
 }
 
@@ -953,7 +944,7 @@ body {
 
 /* bloc */
 @media (max-width: 1211px){
-  .bloc_v2{
+  .bloc_v2, .bloc_stratedi, .bloc_disney{
     gap: 22px;
   }
 
@@ -1003,15 +994,15 @@ body {
 
 /* téléphone */
 @media (max-width: 926px){
-.bloc_interview, .bloc_v2 {
+.bloc_interview, .bloc_v2, .bloc_stratedi, .bloc_disney {
   flex-direction: column;
 }
 
-.bloc_mbsite, .bloc_motion, .bloc_v1{
+.bloc_mbsite, .bloc_motion, .bloc_v1, .bloc_podcast{
   flex-direction: column-reverse;
 }
 
-  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1{
+  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney, .bloc_podcast{
     align-items: center;
     gap: 33px;
   }
@@ -1113,7 +1104,7 @@ body {
     font-size: 5rem;
   }
 
-  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1 {
+  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney, .bloc_podcast {
     gap: 20px;
   }
 }
