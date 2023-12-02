@@ -1,22 +1,9 @@
 <!-- 
-  - changer photo "moi"
+   - Gsap écriture page accueil
 
-  - rajouter la date et le contexte (projets perso, pro, scolaire) pour chaque projet
-
-  - 5 ou 6 projets suffisent
-
-  - créer pop up contact en bas à droite + lien vers linkedin
-  <p> 0601291288 <br> andrea.laizeau@gmail.com</p>
-
-  - Gsap écriture page accueil
-
-  - Gsap faire zoom 1er img lien + écrire vous pouvez cliquer
-
-  - enlever border top et botoom
 
   - responsive page matière
 
-  - rajouter contact en bas de page
 
   - vérifier lien + alt + sr-only.. ACCESSIBILITE
 
@@ -26,8 +13,7 @@
       - poids
       - compatibilité navigateur
 
-  - faire les 2 docs annexes
-            
+    - enlever podcast        
  -->
 
 <!DOCTYPE html>
@@ -62,11 +48,11 @@
         <div class="titre">
           <br>
           <h1 class="andrea">Andréa Laizeau</h1>
-          <p class="profession">Développeuse web front <br> et <br> community manager</p>
+          <p class="profession"></p>
         </div>
         <div class="boutons_telephone_cv">
-          <div class="div_bouton_cvvideo"><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
-          <div class="div_bouton_cv"><a class="bouton_cv" href="">CV</a></div> 
+          <div><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
+          <div><a class="bouton_cv" href="">CV</a></div> 
         </div>
       </div>
 
@@ -79,8 +65,8 @@
         </ul>
       </nav>
       <div class="boutons_cv">
-        <div class="div_bouton_cvvideo"><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
-        <div class="div_bouton_cv"><a class="bouton_cv" href="">CV</a></div> 
+        <div><a class="bouton_cvvideo" href="">CV vidéo</a></div> 
+        <div><a class="bouton_cv" href="">CV</a></div> 
       </div>
     </div>
 
@@ -100,6 +86,35 @@
       });
 
     </script>
+
+<!-- pop up contact -->
+<img class="contact" src="./img/contact_2.png" alt="">
+<div class="bloc_contact" id="contactBloc">
+  <h2 class="titre_contact">Contactez-moi</h2> 
+  <a class="lien_contact" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
+  <a class="lien_contact" href="tel:0601291288">06 01 29 12 88</a> <br>
+  <a class="lien_contact" href="">LinkedIn</a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var contactImage = document.querySelector('.contact');
+  var contactBloc = document.getElementById('contactBloc');
+
+  var isOpen = false; // Ajout d'une variable pour suivre l'état du pop-up
+
+  contactImage.addEventListener('click', function() {
+    if (isOpen) {
+      contactBloc.style.display = 'none';
+    } else {
+      contactBloc.style.display = 'block';
+    }
+
+    isOpen = !isOpen; 
+  });
+});
+</script>
+<!-- voir chatgpt -->
 
 <!-- défloutage -->
 <!-- <script>
@@ -207,7 +222,10 @@
     <h1 class="titre_travaux"> Travaux</h1>
     <br><br>
 
+
     <h2 class="titre_bloc">Interview -équipe x6</h2>
+    <p class="contexte_projet">06/02/2023 -BUT MMI</p>
+    <br>
     <div class="bloc_interview">
       
       <iframe class="taille_video_interview" src="https://www.youtube.com/embed/GWf9ZLwHr5E?si=RKzv73pRgE6UOqc5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -232,6 +250,8 @@
 
 
     <h2 class="titre_bloc">Site web -individuel</h2>
+    <p class="contexte_projet">08/2023 -Bénévolat</p>
+    <br>
     <div class="bloc_mbsite">
       <div>
         <a href="https://mb-osteopatheanimalier.com/" target="_blank"><img class="img_mbsite"
@@ -248,11 +268,11 @@
       </div>
 
     </div>
-
-    <br><br><br>
-    <div class="ligne"></div>
+<br>
     <br><br><br>
     <h2 class="titre_bloc">Vidéos -individuel</h2>
+    <p class="contexte_projet">08/2023 -Bénévolat</p>
+    <br>
     <div class="bloc_v2">
       <div>
         <video class="taille_video_mb" controls poster="./img/mb_video.JPG">
@@ -275,6 +295,8 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Stratégie éditorial -équipe x5</h2>
+    <p class="contexte_projet">25/05/2023 -BUT MMI</p>
+    <br>
     <div class="bloc_stratedi">
       <div>
         <a href="https://www.mindmeister.com/app/map/2752765894?t=GQQWxFqD5p" target="_blank"><img
@@ -290,10 +312,10 @@
     </div>
 
 
-    <br><br><br>
-    <div class="ligne"></div>
-    <br><br><br>
+    <br><br><br><br>
     <h2 class="titre_bloc">Motion design -équipe x5</h2>
+    <p class="contexte_projet">16/06/2023 -BUT MMI</p>
+    <br>
     <div class="bloc_motion">
       <iframe class="taille_motion" src="https://www.youtube.com/embed/1VAf3Epv2B8?si=BVAKVKxrNldNKw-C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -314,6 +336,8 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Linguavers -équipe x2</h2>
+    <p class="contexte_projet">16/05/2023 -BUT MMI</p>
+    <br>
     <div class="bloc_v1">
       <div>
         <a href="" target="_blank"><img class="img_carre" src="./img/linguavers.jpg" alt=""></a>
@@ -331,6 +355,8 @@
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Disneyland -individuel</h2>
+    <p class="contexte_projet">04/2023 -BUT MMI</p>
+    <br>
     <div class="bloc_disney">
         <video class="taille_video_refont" controls autoplay>
           <source src="./img/video_refonte_disney.mp4" type="video/mp4">
@@ -347,8 +373,8 @@
           <a class="lien_video2" href="https://www.figma.com/file/ltB6n8OhFmo6sQNOjEpGPX/refonte_disney?type=design&node-id=0%3A1&mode=design&t=TwJ37H0BkMtuD3Gc-1" target="_blank">Maquette Figma</a></p>
       </div>
     </div>
-
-    <br><br><br>
+<br><br> <br>
+    <!-- <br><br><br>
     <div class="ligne"></div>
     <br><br><br>
     <h2 class="titre_bloc">Podcast -individuel</h2>
@@ -364,7 +390,7 @@
         <p class="texte_podcast">Créer un monde fictif en le rendant le plus réel possible. C’était mon but !</p>
       </div>
     </div>
-    <br><br>
+    <br><br> -->
   </div>
 
   <!-- DIPLOMES -->
@@ -405,11 +431,22 @@
       </div>
       
 
-     
-
-
     </div>
 <br><br>
+  </div>
+
+  <div class="final_contact">
+    <div class="bloc1_final_contact">
+      <a class="lien_contact final_telephone" href="tel:0601291288">06 01 29 12 88</a>
+      <a class="lien_contact final_telephone" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
+    </div>
+
+      <div class="final_bloc_bouton">
+        <div><a class="final_bouton" href="">CV vidéo</a></div> 
+        <div><a class="final_bouton" href="">CV</a></div> 
+      </div>
+  </div>
+
   </div>
 </body>
 <!-- GSAP -->
