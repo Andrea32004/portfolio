@@ -444,7 +444,7 @@ padding-left: 0px;
 }
 
 .projet{
-  color:#E0DAD7FF;
+  color:#FFE9E9;
   font-weight: 600;
 }
 
@@ -460,6 +460,16 @@ padding-left: 0px;
 
 .ouvert{
   font-weight: 600;
+}
+
+.ambi{
+  font-weight: 600;
+  color: rgb(255, 194, 80);
+}
+
+.ecoute{
+  font-weight: 600;
+  color: #4d4dec;
 }
 
 .slide_titre{
