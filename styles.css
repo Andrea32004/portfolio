@@ -64,7 +64,6 @@ body{
 }
 
 .img_calendrier{
-  /* width: 14vw; */
   object-fit: contain;
   width: 208px; 
 }
@@ -80,7 +79,6 @@ body{
   border-style : solid ;
   border-width : 10px ;
   border-image : linear-gradient(#381F31, #F29BAB, #BF88BC, #7977A6) 1;
-  /* height: 97vh; */
 }
 
 
@@ -167,8 +165,6 @@ padding-left: 0px;
   text-align: center;
   color: #ffffff;
   gap: 20px;
-  /* width: 50%; */
-
 }
 
 .andrea{
@@ -380,7 +376,6 @@ padding-left: 0px;
 .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
 .panel4 { background-image:url(./img/slide_voyage.jpg); }
 .panel5 { background-image:url(./img/slide_danse_retouche.jpg);
-  /* .panel5 { background-image:url(./img/028.JPG); */
 }
 
 /* Flex Children */
@@ -397,17 +392,12 @@ padding-left: 0px;
 
 /* différencier écriture du haut à celle du bas = permet de faire l'effet */
 .panel > *:first-child { transform: translateY(-100%);}
-/* media querry : transform: translateX(0); */
-/* la class contenu "open-active" fera ces transformation */
 
 .panel.open-active > *:first-child { transform: translateY(0);}
-/* media query : transform: translateX(-100%); */
 
 .panel > *:last-child { transform: translateY(100%);}
-/*media query : transform: translateX(100%); */
 
 .panel.open-active > *:last-child { transform: translateY(0);}
-/* media query : transform: translateX(0); */
 
 
 
@@ -424,7 +414,6 @@ padding-left: 0px;
 }
 
 /* mots couleur paneaux */
-
 .animaux{
   color : #E12136FF;
   font-weight: 600;
@@ -578,7 +567,6 @@ padding-left: 0px;
   display: flex;
   width: 80%;
   margin: auto;
-  /* gap: 50px; */
   justify-content: space-around;
 }
 
@@ -777,7 +765,6 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
 .final_telephone:hover{
   display: inline-block;
-/* background: linear-gradient(to right, #381F31, #F29BAB, #BF88BC, #7977A6 ); */
 background: linear-gradient(to right, white, #F29BAB, #BF88BC, white );
 background-clip: text;
 -webkit-background-clip: text;
@@ -1292,12 +1279,6 @@ body {
     font-size: 2rem;
   }
 }
-
-/* @media (max-width: 1126px){
-.texte_interview {
-  width: 457px;
-}
-} */
 
 @media (max-width: 986px){
   .titre_certif{

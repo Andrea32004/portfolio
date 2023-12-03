@@ -1,11 +1,9 @@
 //Largeur de l'écran = animation responsive ordi + téléphone
-// Obtenez la largeur de l'écran
+// Obtenir la largeur de l'écran
 const largeurEcran = window.innerWidth;
 
-// Définissez les variables en fonction de la largeur de l'écran
-const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajustez les valeurs selon vos besoins
-
-
+// variables en fonction de la largeur de l'écran
+const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajuste les valeurs selon vos besoins
 
 
 //accueil
@@ -71,14 +69,14 @@ gsap.to('.bouton_gsap', {
 
 
 //profil
-//pose problème sur télélphone
 gsap.from('.img_profil', {
     scrollTrigger: {
         trigger: '.texte_profil',
         start: 'top 90%',
       },
     opacity: 0,
-    duration: 10,
+    duration: 7,
+    ease: 'power2.out'
 }) 
 
 gsap.from(".texte_histoire", {
@@ -89,6 +87,7 @@ gsap.from(".texte_histoire", {
   rotation: 10, 
          x: xValeur, 
          duration: 0.5,
+         ease: 'power2.out'
         });
 
 gsap.from(".texte_mmi", {
@@ -99,6 +98,7 @@ gsap.from(".texte_mmi", {
   rotation: 10, 
          x: xValeur, 
          duration: 0.5,
+         ease: 'power2.out'
         });
 
 
@@ -121,6 +121,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_mbsite', {
@@ -130,6 +131,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_v2', {
@@ -139,6 +141,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_stratedi', {
@@ -148,6 +151,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_motion', {
@@ -157,6 +161,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_v1', {
@@ -166,6 +171,7 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
 
   gsap.from('.bloc_disney', {
@@ -175,13 +181,5 @@ gsap.from(".texte_mmi", {
     },
     opacity: 0,
     duration: 1,
+    ease: 'power2.out'
   });
-
-  // gsap.from('.bloc_podcast', {
-  //   scrollTrigger: {
-  //     trigger: '.bloc_podcast',
-  //     start: 'top 80%',
-  //   },
-  //   opacity: 0,
-  //   duration: 2,
-  // });
