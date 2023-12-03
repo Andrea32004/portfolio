@@ -1,9 +1,3 @@
-/* A FAIRE : */
-
-/* Ajouter effet de zoom sur image lien */
-/* quand la souris passe sur le backround image = plus flou */
-/* AJouter nav dans la page matière + planning */
-
 @font-face {
   font-family: 'italiano';
   src: url('typo/italianno.regular.ttf') format('truetype');
@@ -183,7 +177,7 @@ padding-left: 0px;
   font-weight: 500;
 }
 
-.profession{
+ .f_enfant, .s_enfant, .t_enfant{
   font-size: 2rem;
   line-height: 40px
 }
@@ -208,7 +202,7 @@ padding-left: 0px;
   border: solid 2px #603645;
   color: black;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 2rem;
   border-radius: 25px;
   padding: 5px;
   text-decoration: none;
@@ -238,6 +232,7 @@ padding-left: 0px;
   right: 10px;
   padding: 6px;
   cursor: pointer;
+  min-width: 66px;
 }
 
 .contact:hover{
@@ -564,11 +559,11 @@ padding-left: 0px;
 
 }
 
-.texte_motion, .texte_strat, .texte_disney, .texte_podcast, .texte_mbvideo, .texte_mbsite, .texte_interview{
+.texte_motion, .texte_strat, .texte_disney, .texte_mbvideo, .texte_mbsite, .texte_interview{
   line-height: 28px;
 }
 
-.bloc_v1, .bloc_v2, .bloc_mbsite, .bloc_motion, .bloc_interview, .bloc_stratedi, .bloc_disney, .bloc_podcast{
+.bloc_v1, .bloc_v2, .bloc_mbsite, .bloc_motion, .bloc_interview, .bloc_stratedi, .bloc_disney{
   display: flex;
   width: 80%;
   margin: auto;
@@ -639,10 +634,6 @@ padding-left: 0px;
 
 .texte_disney{
   width: 472px;
-}
-
-.texte_podcast{
-  width: 421px;
 }
 
 .img_mbsite{
@@ -822,7 +813,7 @@ text-decoration: underline;
 
 /* ACCUEIL */
 @media (max-width: 1178px){
-  .profession {
+  .f_enfant, .s_enfant, .t_enfant {
     font-size: 1.8rem;
     line-height: 40px;
     margin-top: -10px;
@@ -842,7 +833,7 @@ text-decoration: underline;
     gap: 50px;
   }
 
-  .profession {
+  .f_enfant, .s_enfant, .t_enfant {
     font-size: 1.66rem;
   }
 
@@ -929,7 +920,7 @@ text-decoration: underline;
 
 
  @media (max-width: 667px){
-  .profession {
+  .f_enfant, .s_enfant, .t_enfant {
     font-size: 1.4rem;
   }
 
@@ -1156,11 +1147,11 @@ body {
   flex-direction: column;
 }
 
-.bloc_mbsite, .bloc_motion, .bloc_v1, .bloc_podcast{
+.bloc_mbsite, .bloc_motion, .bloc_v1{
   flex-direction: column-reverse;
 }
 
-  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney, .bloc_podcast{
+  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney{
     align-items: center;
     gap: 33px;
   }
@@ -1175,7 +1166,7 @@ body {
     font-size: 6.3rem;
   }
 
-  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_podcast {
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney {
     width: 498px;
   }
 
@@ -1248,7 +1239,7 @@ body {
     min-width: 231px;
   }
 
-  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_podcast {
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney{
     width: 327px;
     line-height: normal;
   }
@@ -1266,7 +1257,7 @@ body {
     font-size: 5rem;
   }
 
-  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney, .bloc_podcast {
+  .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney{
     gap: 20px;
   }
 }
@@ -1474,6 +1465,13 @@ span{
     }
 
 }
+
+@media (max-width: 546px) {
+.contact{
+  min-width: 54px;
+}
+}
+
 
 @media (max-width: 501px) {
   .bloc1_final_contact{
