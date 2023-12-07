@@ -29,13 +29,13 @@ const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajuste les valeurs selon v
 
 
  gsap.set('.andrea', { 
-  opacity: 0, // Définit l'opacité initiale à 0 pour rendre le texte invisible
-  scale: 0.5 // Définit l'échelle initiale à 0.5 pour un effet de départ en taille réduite
+  opacity: 0, // Définit l'opacité initiale 
+  scale: 0.5 // Définit l'échelle initiale
 });
 
 gsap.to('.andrea', { 
-  opacity: 1, // Augmente l'opacité à 1 pour rendre le texte visible
-  scale: 1, // Augmente l'échelle à 1 pour un effet de zoom
+  opacity: 1, // Augmente l'opacité 
+  scale: 1, // Augmente l'échelle = effet de zoom
   duration: 1, // La durée de l'animation en secondes
   ease: 'power2.out' // Utilise une fonction d'ease pour une animation plus naturelle
 });
