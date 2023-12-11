@@ -524,19 +524,12 @@ padding-left: 0px;
 .competence{
   padding: 7px;
   margin: auto;
-  font-size: 1.9rem;
-  font-weight: 1000;
-
-    /* dégarder */
-    display: inline-block;
-    background: linear-gradient(to right, #381F31, #F29BAB, #BF88BC, #7977A6 );
-      background-clip: border-box;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 1.66rem;
+  font-weight: 800;
 
     -webkit-text-stroke: 0.1px;
   -webkit-text-stroke-color: black;
+  color: #BF88BC;
 
 
 }
