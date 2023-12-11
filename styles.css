@@ -524,8 +524,8 @@ padding-left: 0px;
 .competence{
   padding: 7px;
   margin: auto;
-  font-size: 1.66rem;
-  font-weight: 600;
+  font-size: 1.9rem;
+  font-weight: 1000;
 
     /* dégarder */
     display: inline-block;
@@ -535,7 +535,7 @@ padding-left: 0px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    -webkit-text-stroke: 0.15px;
+    -webkit-text-stroke: 0.1px;
   -webkit-text-stroke-color: black;
 
 
