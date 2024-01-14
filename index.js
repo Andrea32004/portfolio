@@ -22,7 +22,7 @@ const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajuste les valeurs selon v
  })
 
  tl.to('.t_enfant', { 
-  text: 'community manager',
+  text: 'créatrice de contenu digital',
   duration: 1,
  })
 
