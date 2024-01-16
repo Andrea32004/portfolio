@@ -86,10 +86,12 @@
       const menuHamburger = document.querySelector(".menu");
       const navLinks = document.querySelector("nav");
       const titreSection = document.querySelector(".titre");
+      const boutonSection = document.querySelector(".boutons_telephone_cv");
 
       menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile_menu');
         titreSection.classList.toggle('hide_title');
+        boutonSection.classList.toggle('hide_title');
       });
 
     </script>

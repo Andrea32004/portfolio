@@ -804,6 +804,11 @@ text-decoration: underline;
     display: none;
   }
 
+  .boutons_telephone_cv.hide_title {
+    display: none;
+  }
+
+
 
 /* ------- */
   .bloc_accueil {
@@ -1575,5 +1580,25 @@ font-size: 1.2rem;
           
           .andrea {
             font-size: 4rem;
+          }
+        }
+
+        @media (max-width: 414px) {
+          .andrea {
+            font-size: 3.6rem;
+          }
+
+          .titre p {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 356px) {
+          .andrea {
+            font-size: 3.3rem;
+          }
+
+          .titre p {
+            font-size: 1rem;
           }
         }
