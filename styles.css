@@ -25,7 +25,7 @@ body{
   text-align: center;
   margin: auto;
   font-family: 'Dancing Script', 'Cookie','Great Vibes', cursive;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 300;
   height: 13vh;
 }
@@ -129,7 +129,7 @@ padding-left: 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 72vh;
+  height: 61vh;
   justify-content: center;
 }
 
@@ -160,7 +160,7 @@ padding-left: 0px;
   padding: 0px;
 }
 
- .f_enfant, .s_enfant, .t_enfant{
+ .titre p{
   font-size: 1.9rem;
   line-height: 40px
 }
@@ -330,11 +330,19 @@ padding-left: 0px;
   cursor: pointer;
 }
 
-.panel1 { background-image:url(./img/slider_passion3.JPG); }
+.panel1 { background-image:url(./img/slider_passion3.jpg); }
 .panel2 { background-image:url(./img/slider_creation.jpg); }
-.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+.panel3 { background-image:url(./img/slider_determiner.jpg); }
 .panel4 { background-image:url(./img/slide_voyage.jpg); }
-.panel5 { background-image:url(./img/slide_danse_retouche.jpg);
+.panel5 { background-image:url(./img/slide_danse.jpg);
+}
+
+/* ouvert */
+.panel1.open { background-image:url(./img/slider_passion3flt.jpg); }
+.panel2.open { background-image:url(./img/slider_creationflt.jpg); }
+.panel3.open { background-image:url(./img/slider_determinerflt.jpg); }
+.panel4.open { background-image:url(./img/slide_voyageflt.jpg); }
+.panel5.open { background-image:url(./img/slide_danseflt.jpg);
 }
 
 /* Flex Children */
@@ -347,7 +355,9 @@ padding-left: 0px;
   flex: 1 0 auto;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
+
 
 /* différencier écriture du haut à celle du bas = permet de faire l'effet */
 .panel > *:first-child { transform: translateY(-100%);}
@@ -370,57 +380,9 @@ padding-left: 0px;
   flex:5;
   /* change titre quand panel ouvert "d&terminer"... */
   font-size: 2.5rem;
+
 }
 
-/* mots couleur paneaux */
-.animaux{
-  color : #E12136FF;
-  font-weight: 600;
-}
-
-.musique{
-  color: #D6DAF8FF;
-  font-weight: 600;
-}
-
-.audio{
-  color:#565B5FFF;
-  font-weight: 600;
-}
-
-.site{
-  color: #FFF4E5FF;
-   font-weight: 600;
-}
-
-.projet{
-  color:#FFE9E9;
-  font-weight: 600;
-}
-
-.sport{
-  color: #463319FF;
-  font-weight: 600;
-}
-
-.voyage{
-  color:rgb(234, 241, 254);
-  font-weight: 600;
-}
-
-.ouvert{
-  font-weight: 600;
-}
-
-.ambi{
-  font-weight: 600;
-  color: rgb(255, 194, 80);
-}
-
-.ecoute{
-  font-weight: 600;
-  color: #4d4dec;
-}
 
 .slide_titre{
   font-family: 'Dancing Script', 'Cookie','Great Vibes', cursive;
@@ -452,7 +414,7 @@ padding-left: 0px;
 .titre_travaux{
   font-family: 'Dancing Script', 'Cookie','Great Vibes', cursive;
   font-weight: 500;
-  font-size: 7.5rem;
+  font-size: 6.6rem;
   padding-top: 29px;
   padding-left: 52px;
 
@@ -651,19 +613,19 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .titre_certif{
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .soustitre_certif{
   font-weight: 300;
   font-family: 'Dancing Script', 'Cookie','Great Vibes', cursive;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
 }
 
 .logo_certif{
-  width: 7.1vw;
-  padding-left: 34px;
-  min-width: 75px;
+  width: 5.5vw;
+  padding-left: 18px;
+  min-width: 66px;
 }
 
 .contenu_cert{
@@ -672,7 +634,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   width: 90%;
   display: flex;
   align-items: center;
-  height: 119px;
+  height: 108px;
   gap: 32px;
 
   transition: 0.3s;
@@ -705,7 +667,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   gap: 20px;
   flex-direction: column;
-  font-size: 4.1rem;
+  font-size: 3.7rem;
   align-items: center;
   text-decoration: none;
 }
@@ -732,7 +694,7 @@ text-decoration: underline;
 }
 
 .final_bouton{
-  font-size: 4.6rem;
+  font-size: 3.5rem;
   border: solid 2px white;
   font-weight: 500;
   border-radius: 25px;
@@ -763,7 +725,7 @@ text-decoration: underline;
 
 /* ACCUEIL */
 @media (max-width: 1178px){
-  .f_enfant, .s_enfant, .t_enfant {
+  .titre p{
     font-size: 1.8rem;
     line-height: 40px;
     margin-top: -10px;
@@ -783,7 +745,7 @@ text-decoration: underline;
     gap: 50px;
   }
 
-  .f_enfant, .s_enfant, .t_enfant {
+  .titre p {
     font-size: 1.66rem;
   }
 
@@ -871,7 +833,7 @@ text-decoration: underline;
 
 
  @media (max-width: 667px){
-  .f_enfant, .s_enfant, .t_enfant {
+  .titre p {
     font-size: 1.4rem;
   }
 
@@ -897,6 +859,7 @@ text-decoration: underline;
   }
 
 }
+
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------*/
@@ -1528,6 +1491,7 @@ font-size: 1.2rem;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  padding-top: 27px;
 }
 
 
@@ -1542,12 +1506,19 @@ font-size: 1.2rem;
 
   }
 
-  @media (max-width: 568px) {
+  @media (max-width: 581px) {
     .titre_matiere {
-      font-size: 3.5rem;
+      font-size: 2.6rem;
     }
-
      }
+
+
+     @media (max-width: 502px) {
+      .titre_matiere {
+        font-size: 2.2rem;
+      }
+       }
+
 
      @media (max-width: 477px) {
       .andrea {
@@ -1557,9 +1528,6 @@ font-size: 1.2rem;
 
 
      @media (max-width: 450px) {
-      .titre_matiere {
-        font-size: 2.5rem;
-      }
 
       .img_calendrier {
         width: 146px;
@@ -1571,6 +1539,12 @@ font-size: 1.2rem;
       }
        }
 
+       @media (max-width: 400px) {
+        .titre_matiere {
+          font-size: 1.9rem;
+        }
+         }
+       
        @media (max-width: 320px) {
         .bloc_img_matiere{
           display: flex;
@@ -1582,3 +1556,12 @@ font-size: 1.2rem;
 
  
 
+         @media (max-width: 428px){
+          .titre p {
+            font-size: 1.2rem;
+          }
+          
+          .andrea {
+            font-size: 4rem;
+          }
+        }

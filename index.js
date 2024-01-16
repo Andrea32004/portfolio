@@ -7,37 +7,26 @@ const xValeur = largeurEcran >= 768 ? -600 : -300; // Ajuste les valeurs selon v
 
 
 //accueil
- gsap.set('.f_enfant', {text: ''})
+ gsap.set('.andrea', {text: ''})
  const tl = gsap.timeline()
 
- tl.to('.f_enfant', { 
-  text: 'Développeuse web front',
-  duration: 1,
-  delay: 0.7,
- })
-
- tl.to('.s_enfant', { 
-  text: 'et',
-  duration: 0.5,
- })
-
- tl.to('.t_enfant', { 
-  text: 'créatrice de contenu digital',
+ tl.to('.andrea', { 
+  text: 'Andréa Laizeau',
   duration: 1,
  })
 
 
-
- gsap.set('.andrea', { 
+ gsap.set('.titre p', { 
   opacity: 0, // Définit l'opacité initiale 
   scale: 0.5 // Définit l'échelle initiale
 });
 
-gsap.to('.andrea', { 
+gsap.to('.titre p', { 
   opacity: 1, // Augmente l'opacité 
   scale: 1, // Augmente l'échelle = effet de zoom
-  duration: 1, // La durée de l'animation en secondes
-  ease: 'power2.out' // Utilise une fonction d'ease pour une animation plus naturelle
+  duration: 3, // La durée de l'animation en secondes
+  ease: 'power2.out', // Utilise une fonction d'ease pour une animation plus naturelle
+  delay: 1
 });
 
 gsap.set('.nav_ul', { 
@@ -48,9 +37,9 @@ gsap.set('.nav_ul', {
 gsap.to('.nav_ul', { 
   opacity: 1, 
   scale: 1, 
-  duration: 1,
-  ease: 'bounce.out',
-  delay: 2
+  duration: 3,
+  ease: 'power2.out',
+  delay: 1
 });
 
 gsap.set('.bouton_gsap', { 
@@ -75,7 +64,7 @@ gsap.from('.img_profil', {
         start: 'top 90%',
       },
     opacity: 0,
-    duration: 7,
+    duration: 5,
     ease: 'power2.out'
 }) 
 
@@ -101,16 +90,6 @@ gsap.from(".texte_mmi", {
          ease: 'power2.out'
         });
 
-
-//cliquez sur l'image pour voir le projet
-// gsap.from('.img_mbsite', {
-//     scrollTrigger: {
-//         trigger: '.img_mbsite',
-//         start: 'top 80%',
-//       },
-//     opacity: 0,
-//     duration: 10,
-// }) 
 
 
 //travaux
