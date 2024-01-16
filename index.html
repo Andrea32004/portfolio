@@ -8,37 +8,71 @@
   <title>Andréa Laizeau -vidéos, sites web, maquettes...</title>
 
 
-<!-- partage sur les réseaux sociaux -->
-<meta property="og:title" content="Andréa Laizeau -Métiers du Multimédia et de l'Internet">
-<meta property="og:description" content="Découvrez qui je suis, mes projets et mon expérience.">
-<meta property="og:image" content="https://andrea-laizeau.netlify.app/img/partage.jpg">
-<meta property="og:url" content="https://andrea-laizeau.netlify.app/">
-<meta property="og:type" content="website">
+  <!-- partage sur les réseaux sociaux -->
+  <meta property="og:title" content="Andréa Laizeau -Métiers du Multimédia et de l'Internet">
+  <meta property="og:description" content="Découvrez qui je suis, mes projets et mon expérience.">
+  <meta property="og:image" content="https://andrea-laizeau.netlify.app/img/partage.jpg">
+  <meta property="og:url" content="https://andrea-laizeau.netlify.app/">
+  <meta property="og:type" content="website">
 
 
-<!-- logo onglet -->
-<link rel="shortcut icon" href="img/icone_16.png" type="image/x-icon" sizes="16x16"> 
-<link rel="shortcut icon" href="img/icone_32.png" type="image/x-icon" sizes="32x32">
-<link rel="shortcut icon" href="img/icone_64.png" type="image/x-icon" sizes="64x64">
-<link rel="shortcut icon" href="img/icone_96.png" type="image/x-icon" sizes="96x96">
+  <!-- logo onglet -->
+  <link rel="shortcut icon" href="img/icone_16.png" type="image/x-icon" sizes="16x16">
+  <link rel="shortcut icon" href="img/icone_32.png" type="image/x-icon" sizes="32x32">
+  <link rel="shortcut icon" href="img/icone_64.png" type="image/x-icon" sizes="64x64">
+  <link rel="shortcut icon" href="img/icone_96.png" type="image/x-icon" sizes="96x96">
 
 
 
-  <!-- font texte -->
+  <!-- écriture texte -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+  <!-- écriture Titre -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
   <script defer type="module" src="index.js"></script>
 </head>
 
 <body>
- 
+
   <div class="bloc_accueil" id="blocAccueil">
-     <div class="bloc_nav">
+    <!-- barre de nav -->
+    <div class="nav_bouton">
+    <nav>
+      <ul class="nav_ul">
+
+        <a class="nav_propos" href="#qui_suis">Qui suis-je ?</a>
+        <a href="#travaux">Travaux</a>
+        <a class="nav_diplome" href="#certif">Certifications</a>
+      </ul>
+    </nav>
+
+      <div class="boutons_cv">
+        <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/fvCcFhCJN3k">CV vidéo</a></div>
+        <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV PDF</a></div>
+      </div>
+    </div>
+    
+
+
+    <!-- <div class="bloc_nav"> -->
       <div class="bloc_titre_bouton">
+        <!-- bouton -->
+        
+        <!-- titre -->
+        
+       <div class="boutons_telephone_cv">
+        <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/fvCcFhCJN3k">CV vidéo</a></div>
+        <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV PDF</a></div>
+    </div> 
+
+    <img class="menu" src="img/menu.png" alt="menu">
+    
         <div class="titre">
-          <br>
           <h1 class="andrea">Andréa Laizeau</h1>
           <p>
             <span class="f_enfant"></span> <br>
@@ -46,152 +80,138 @@
             <span class="t_enfant"></span>
           </p>
         </div>
-        <div class="boutons_telephone_cv">
-          <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/fvCcFhCJN3k">CV vidéo</a></div> 
-          <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV</a></div> 
-        </div>
+
+
       </div>
 
-      <div class="bloc_nav_bouton">
-      <nav>
-        <ul class="nav_ul">
-          
-          <a class="nav_propos" href="#qui_suis">Qui suis-je ?</a>
-          <a href="#travaux">Travaux</a>
-          <a class="nav_diplome" href="#certif">Certifications</a>
-        </ul>
-      </nav>
-      <div class="boutons_cv">
-        <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/fvCcFhCJN3k">CV vidéo</a></div> 
-        <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV</a></div> 
-      </div>
-    </div>
 
-      <img class="menu" src="img/menu.png" alt="menu">
-      
-    </div>
-  
+
     <script>
       const menuHamburger = document.querySelector(".menu");
       const navLinks = document.querySelector("nav");
       const titreSection = document.querySelector(".titre");
-    
-      menuHamburger.addEventListener('click',()=>{
+
+      menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile_menu');
-        titreSection.classList.toggle('hide_title'); 
+        titreSection.classList.toggle('hide_title');
       });
 
     </script>
 
-<!-- pop up contact -->
-<img class="contact" src="./img/contact_2.png" alt="contactez-moi">
-<div class="bloc_contact" id="contactBloc">
-  <h2 class="titre_contact">Contactez-moi</h2> 
-  <a class="lien_contact" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
-  <a class="lien_contact" href="tel:0601291288">06 01 29 12 88</a> <br>
-  <a class="lien_contact" href="https://www.linkedin.com/in/andrea-laizeau/" target="_blank" aria-label="Redirection vers une nouvelle page">LinkedIn</a>
-</div>
+    <!-- pop up contact -->
+    <img class="contact" src="./img/contact_2.png" alt="contactez-moi">
+    <div class="bloc_contact" id="contactBloc">
+      <h2 class="titre_contact">Contactez-moi</h2>
+      <a class="lien_contact" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
+      <a class="lien_contact" href="tel:0601291288">06 01 29 12 88</a> <br>
+      <a class="lien_contact" href="https://www.linkedin.com/in/andrea-laizeau/" target="_blank"
+        aria-label="Redirection vers une nouvelle page">LinkedIn</a>
+    </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var contactImage = document.querySelector('.contact');
-  var contactBloc = document.getElementById('contactBloc');
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var contactImage = document.querySelector('.contact');
+        var contactBloc = document.getElementById('contactBloc');
 
-  var isOpen = false; // Ajout d'une variable pour suivre l'état du pop-up
+        var isOpen = false; // Ajout d'une variable pour suivre l'état du pop-up
 
-  contactImage.addEventListener('click', function() {
-    if (isOpen) {
-      contactBloc.style.display = 'none';
-    } else {
-      contactBloc.style.display = 'block';
-    }
+        contactImage.addEventListener('click', function () {
+          if (isOpen) {
+            contactBloc.style.display = 'none';
+          } else {
+            contactBloc.style.display = 'block';
+          }
 
-    isOpen = !isOpen; 
-  });
-});
-</script>
+          isOpen = !isOpen;
+        });
+      });
+    </script>
 
 
   </div>
-<div class="me_connaitre" id="qui_suis">
-  <div class="bloc_profil">
-    <br>
-    <div class="profil">
 
-      <div class="texte_profil">
-        <div class="texte_histoire">
-        <p>Étant née et évoluant au sein de l'entreprise familiale, j’ai dédié mon temps à observer et à analyser la
-          gestion et la communication interne et externe au sein du centre équestre. <br> <br> Bien que je n'aie pas été
-          directement impliqué dans son fonctionnement, mes années d'observation m’ont appris beaucoup de choses
-          concernant le monde professionnel.</p>
+  <div class="me_connaitre" id="qui_suis">
+    <div class="bloc_profil">
+      <br>
+      <div class="profil">
+
+        <div class="texte_profil">
+          <div class="texte_histoire">
+            <p>Toute mon enfance, j’ai dédié mon temps à observer et à analyser la gestion et la communication interne
+              et externe au sein de l'entreprise familiale. <br> <br> Bien que je n'aie pas été
+              directement impliqué dans son fonctionnement, mes années d'observation m’ont appris beaucoup de choses
+              concernant le monde professionnel.</p>
           </div>
-<div class="avec_img">
-        <img class="img_profil" src="./img/moi_profil.jpg" alt="photo de profil">
+          <div class="avec_img">
+            <img class="img_profil" src="./img/moi_profil.jpg" alt="photo de profil">
 
-        <div class="texte_mmi">
-          <p class="mmi_experience">J'utilise tous les outils dont je dispose, grâce à mon expérience passée et à mon BUT Métiers du Multimédia et de l'Internet dans lequel j'étudie actuellement, pour mener à bien mes projets</p>
-          <div class="div_lien_matiere"><a class="lien_matiere" href="matiere.html" target="_blank" aria-label="Redirection vers une nouvelle page">BUT MMI</a></div> 
+            <div class="texte_mmi">
+              <p class="mmi_experience">J'utilise tous les outils dont je dispose, grâce à mon expérience passée et à
+                mon BUT Métiers du Multimédia et de l'Internet dans lequel j'étudie actuellement, pour mener à bien mes
+                projets</p>
+              <div class="div_lien_matiere"><a class="lien_matiere" href="matiere.html" target="_blank"
+                  aria-label="Redirection vers une nouvelle page">BUT MMI</a></div>
+            </div>
+          </div>
         </div>
+
       </div>
+      <br>
+    </div>
+
+
+    <!-- SLIDER -->
+    <div class="panels">
+      <div class="panel panel1">
+        <p class="animaux">Animaux</p>
+        <p class="slide_titre">Passionnée</p>
+        <p class="musique">Musique</p>
       </div>
+      <div class="panel panel2">
+        <p class="audio">Audiovisuel</p>
+        <p class="slide_titre">Créative</p>
+        <p class="site">Site web</p>
+      </div>
+      <div class="panel panel3">
+        <p class="sport">Sports</p>
+        <p class="slide_titre">Déterminée</p>
+        <p class="projet">Projets</p>
 
+      </div>
+      <div class="panel panel4">
+        <p class="ouvert">Ouverte sur</p>
+        <p class="slide_titre">Le monde</p>
+        <p class="voyage">*voyage*</p>
+      </div>
+      <div class="panel panel5">
+        <p class="ecoute">A l'écoute</p>
+        <p class="slide_titre">Moi</p>
+        <p class="ambi">Ambitieuse</p>
+      </div>
     </div>
-    <br>
-  </div>
 
-
-  <!-- SLIDER -->
-  <div class="panels">
-    <div class="panel panel1">
-      <p class="animaux">Animaux</p>
-      <p class="slide_titre">Passionnée</p>
-      <p class="musique">Musique</p>
-    </div>
-    <div class="panel panel2">
-      <p class="audio">Audiovisuel</p>
-      <p class="slide_titre">Créative</p>
-      <p class="site">Site web</p>
-    </div>
-    <div class="panel panel3">
-      <p class="sport">Sports</p>
-      <p class="slide_titre">Déterminée</p>
-      <p class="projet">Projets</p>
-      
-    </div>
-    <div class="panel panel4">
-      <p class="ouvert">Ouverte sur</p>
-      <p class="slide_titre">Le monde</p>
-      <p class="voyage">*voyage*</p>
-    </div>
-    <div class="panel panel5">
-      <p class="ecoute">A l'écoute</p>
-      <p class="slide_titre">Moi</p>
-      <p class="ambi">Ambitieuse</p>
-    </div>
-  </div>
-
-  <script>
-    //Déclare les fonctions dont on a besoin
-    const panels = document.querySelectorAll('.panel');
-    function toggleOpen() {
-      this.classList.toggle('open');
-    }
-
-    function toggleActive(e) {
-      console.log(e.propertyName);
-      if (e.propertyName.includes('flex')) {
-        this.classList.toggle('open-active');
+    <script>
+      //Déclare les fonctions dont on a besoin
+      const panels = document.querySelectorAll('.panel');
+      function toggleOpen() {
+        this.classList.toggle('open');
       }
-    }
 
-    //Ouverture du panel quand click
-    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+      function toggleActive(e) {
+        console.log(e.propertyName);
+        if (e.propertyName.includes('flex')) {
+          this.classList.toggle('open-active');
+        }
+      }
 
-    //apparition des écrits en haut et en bas 
-    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
-  </script>
+      //Ouverture du panel quand click
+      panels.forEach(panel => panel.addEventListener('click', toggleOpen));
 
-</div>
+      //apparition des écrits en haut et en bas 
+      panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    </script>
+
+  </div>
 
 
 
@@ -204,8 +224,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="contexte_projet">06/02/2023 -BUT MMI</p>
     <br>
     <div class="bloc_interview">
-      
-      <iframe class="taille_video_interview" src="https://www.youtube.com/embed/GWf9ZLwHr5E?si=RKzv73pRgE6UOqc5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <iframe class="taille_video_interview" src="https://www.youtube.com/embed/GWf9ZLwHr5E?si=RKzv73pRgE6UOqc5"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
       <div class="div_texte">
         <div class="bouton">
           <p class="competence">Adobe Premiere Pro</p>
@@ -231,7 +254,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <br>
     <div class="bloc_mbsite">
       <div>
-        <a href="https://mb-osteopatheanimalier.com/" target="_blank" aria-label="Redirection vers une nouvelle page"><img class="img_mbsite" src="./img/mb_site_web.jpg" alt="site web de Maëlys Bizet"></a>
+        <a href="https://mb-osteopatheanimalier.com/" target="_blank"
+          aria-label="Redirection vers une nouvelle page"><img class="img_mbsite" src="./img/mb_site_web.jpg"
+            alt="site web de Maëlys Bizet"></a>
       </div>
 
       <div class="div_texte">
@@ -240,11 +265,13 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="competence">CSS</p>
           <p class="competence">Figma</p>
         </div>
-        <p class="texte_mbsite">J'ai porté de nombreuses casquettes : web designer, conceptrice UX/UI, intégratrice web et photographe. <br> La communication, l’organisation, la patience et la prise de décision ont été les clés de réussite de ce projet.</p>
+        <p class="texte_mbsite">J'ai porté de nombreuses casquettes : web designer, conceptrice UX/UI, intégratrice web
+          et photographe. <br> La communication, l’organisation, la patience et la prise de décision ont été les clés de
+          réussite de ce projet.</p>
       </div>
 
     </div>
-<br>
+    <br>
     <br><br><br>
     <h2 class="titre_bloc">Vidéos -individuel</h2>
     <p class="contexte_projet">08/2023 -Bénévolat</p>
@@ -262,8 +289,11 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="bouton">
           <p class="competence">Adobe Premiere Pro</p>
         </div>
-        <p class="texte_mbvideo">Vidéaste, pour Maëlys bizet, lors d’un concours d’Agility canin. J’ai su m’adapter au cadre de tournage et à la sensibilité des animaux.<br>
-          <a class="lien_video1" href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS" target="_blank" aria-label="Ouverture d'une nouvelle page">Voir l'ensemble des vidéos</a> </p>
+        <p class="texte_mbvideo">Vidéaste, pour Maëlys bizet, lors d’un concours d’Agility canin. J’ai su m’adapter au
+          cadre de tournage et à la sensibilité des animaux.<br>
+          <a class="lien_video1" href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS"
+            target="_blank" aria-label="Ouverture d'une nouvelle page">Voir l'ensemble des vidéos</a>
+        </p>
       </div>
     </div>
 
@@ -275,16 +305,19 @@ document.addEventListener('DOMContentLoaded', function() {
     <br>
     <div class="bloc_stratedi">
       <div>
-      <!-- changer lien pour anonyme -->
-        <a href="https://mm.tt/app/map/2752765894?t=GQQWxFqD5p" target="_blank" aria-label="Une nouvelle page s'ouvrira"><img
-            class="img_refuge_strat" src="./img/strategie_editorial.jpg" alt="stratégie éditorial"></a>
+        <!-- changer lien pour anonyme -->
+        <a href="https://mm.tt/app/map/2752765894?t=GQQWxFqD5p" target="_blank"
+          aria-label="Une nouvelle page s'ouvrira"><img class="img_refuge_strat" src="./img/strategie_editorial.jpg"
+            alt="stratégie éditorial"></a>
       </div>
 
       <div class="div_texte">
         <div class="bouton">
           <p class="competence">Mindmeister</p>
         </div>
-        <p class="texte_strat">Dans le cadre de la refonte de la communication digitale d'un refuge animalier, nous avons réuni tous les éléments nécessaires pour mieux cibler notre public, afin que leurs sites web, motion design, et réseaux sociaux reflètent leur identité.</p>
+        <p class="texte_strat">Dans le cadre de la refonte de la communication digitale d'un refuge animalier, nous
+          avons réuni tous les éléments nécessaires pour mieux cibler notre public, afin que leurs sites web, motion
+          design, et réseaux sociaux reflètent leur identité.</p>
       </div>
     </div>
 
@@ -294,7 +327,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="contexte_projet">16/06/2023 -BUT MMI</p>
     <br>
     <div class="bloc_motion">
-      <iframe class="taille_motion" src="https://www.youtube.com/embed/1VAf3Epv2B8?si=BVAKVKxrNldNKw-C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="taille_motion" src="https://www.youtube.com/embed/1VAf3Epv2B8?si=BVAKVKxrNldNKw-C"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
 
       <div class="div_texte">
         <div class="bouton">
@@ -302,7 +338,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <p class="texte_motion">
           Nous avons conçu l'histoire en équipe, j'ai rédigé et animé le texte de la vidéo. <br>
-          Tout au long de cette refont, j'ai analysé l'ambiance et la communication de l'association, scénarisé, animé, et rédigé le contenu écrit.</p>
+          Tout au long de cette refont, j'ai analysé l'ambiance et la communication de l'association, scénarisé, animé,
+          et rédigé le contenu écrit.</p>
       </div>
     </div>
 
@@ -317,7 +354,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <br>
     <div class="bloc_v1">
       <div>
-        <a href="./img/LinguaVerse - Andréa L., Daria I..pdf" target="_blank" aria-label="Redirection dans une nouvelle page"><img class="img_carre" src="./img/linguavers.jpg" alt="page de couverture Linguavers"></a>
+        <a href="./img/LinguaVerse - Andréa L., Daria I..pdf" target="_blank"
+          aria-label="Redirection dans une nouvelle page"><img class="img_carre" src="./img/linguavers.jpg"
+            alt="page de couverture Linguavers"></a>
       </div>
 
       <div class="div_texte">
@@ -335,22 +374,27 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="contexte_projet">04/2023 -BUT MMI</p>
     <br>
     <div class="bloc_disney">
-        <video class="taille_video_refont" controls>
-          <source src="./img/video_refonte_disney.mp4" type="video/mp4">
-          <source src="./img/video_refonte_disney.webm" type="video/webm">
-          Votre navigateur ne supporte pas la balise vidéo.
+      <video class="taille_video_refont" controls>
+        <source src="./img/video_refonte_disney.mp4" type="video/mp4">
+        <source src="./img/video_refonte_disney.webm" type="video/webm">
+        Votre navigateur ne supporte pas la balise vidéo.
       </video>
-  
+
 
       <div class="div_texte">
         <div class="bouton">
           <p class="competence">Figma</p>
         </div>
-        <p class="texte_disney">Cette refonte a pour but de raviver l'ancienne magie emblématique de Disney en utilisant des photos historiques afin de mettre en avant les moments emblématiques du passé de Disneyland. Cette approche vise à susciter les anciens souvenirs des visiteurs de ce monde magique.
-          <a class="lien_video2" href="https://www.figma.com/file/ltB6n8OhFmo6sQNOjEpGPX/refonte_disney?type=design&node-id=0%3A1&mode=design&t=TwJ37H0BkMtuD3Gc-1" target="_blank" aria-label="Redirection sur une nouvelle page">Maquette Figma</a></p>
+        <p class="texte_disney">Cette refonte a pour but de raviver l'ancienne magie emblématique de Disney en utilisant
+          des photos historiques afin de mettre en avant les moments emblématiques du passé de Disneyland. Cette
+          approche vise à susciter les anciens souvenirs des visiteurs de ce monde magique.
+          <a class="lien_video2"
+            href="https://www.figma.com/file/ltB6n8OhFmo6sQNOjEpGPX/refonte_disney?type=design&node-id=0%3A1&mode=design&t=TwJ37H0BkMtuD3Gc-1"
+            target="_blank" aria-label="Redirection sur une nouvelle page">Maquette Figma</a>
+        </p>
       </div>
     </div>
-<br><br> <br>
+    <br><br> <br>
   </div>
 
   <!-- DIPLOMES -->
@@ -362,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <div class="contenu_cert">
         <div>
-          <img class="logo_certif" src="./img/permis.jpeg" alt="logo Agence nationale des titres sécurisés"> 
+          <img class="logo_certif" src="./img/permis.jpeg" alt="logo Agence nationale des titres sécurisés">
         </div>
         <div class="texte_cert">
           <h2 class="titre_certif">Permis B</h2>
@@ -389,22 +433,23 @@ document.addEventListener('DOMContentLoaded', function() {
           <p class="soustitre_certif">Fédération Française d'Equitation</p>
         </div>
       </div>
-      
+
 
     </div>
-<br><br>
+    <br><br>
   </div>
 
   <div class="final_contact">
     <div class="bloc1_final_contact">
       <a class="lien_contact final_telephone" href="tel:0601291288">06 01 29 12 88</a>
-      <a class="lien_contact final_telephone" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
+      <a class="lien_contact final_telephone"
+        href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
     </div>
 
-      <div class="final_bloc_bouton">
-        <div><a class="final_bouton" href="">CV vidéo</a></div> 
-        <div><a class="final_bouton" href="./img/andrea_laizeau_cv.pdf">CV</a></div> 
-      </div>
+    <div class="final_bloc_bouton">
+      <div><a class="final_bouton" href="">CV vidéo</a></div>
+      <div><a class="final_bouton" href="./img/andrea_laizeau_cv.pdf">CV</a></div>
+    </div>
   </div>
 
   </div>
