@@ -855,7 +855,7 @@ text-decoration: underline;
   /* telephone */
 @media (max-width: 450px){
   .andrea{
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
 }
@@ -1084,7 +1084,7 @@ body {
 
   .titre_travaux{
     padding-top: 8px;
-    font-size: 6.3rem;
+    font-size: 5.3rem;
   }
 
   .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney {
@@ -1101,7 +1101,7 @@ body {
   }
 
   .titre_travaux {
-    font-size: 6rem;
+    font-size: 4.8rem;
   }
 
   .bloc_travaux {
@@ -1188,18 +1188,30 @@ body {
     padding-bottom: 5px;
   }
 
-  .titre_travaux{
-    font-size: 5rem;
-  }
 
   .bloc_interview, .bloc_mbsite, .bloc_v2, .bloc_motion, .bloc_v1, .bloc_stratedi, .bloc_disney{
     gap: 20px;
   }
 }
 
+@media (max-width: 530px) {
+  .titre_travaux {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 568px){
+  .titre_bloc{
+    font-size: 2.6rem;
+  }
+}
 
 
-
+@media (max-width: 568px){
+  .titre_bloc{
+    font-size: 2.2rem;
+  }
+}
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------*/
