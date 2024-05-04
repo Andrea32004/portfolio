@@ -466,14 +466,14 @@ padding-left: 0px;
   font-size: 1.66rem;
   font-weight: 800;
 
-    -webkit-text-stroke: 0.1px;
-  -webkit-text-stroke-color: black;
-  color: #BF88BC;
+    -webkit-text-stroke: 0.6px;
+  -webkit-text-stroke-color: #967AA8;
+  color: #967AA8;
 
 
 }
 
-.texte_motion, .texte_strat, .texte_disney, .texte_mbvideo, .texte_mbsite, .texte_interview{
+.texte_motion, .texte_strat, .texte_disney, .texte_mbvideo, .texte_mbsite, .texte_interview, .texte_ent{
   line-height: 28px;
 }
 
@@ -482,6 +482,7 @@ padding-left: 0px;
   width: 80%;
   margin: auto;
   justify-content: space-around;
+  align-items: center;
 }
 
 .bloc_interview, .bloc_disney, .bloc_stratedi, .bloc_motion{
@@ -500,6 +501,11 @@ padding-left: 0px;
 .texte_mbvideo{
   width: 560px;
 }
+
+.texte_ent{
+  padding-left: 18px;
+}
+
 
 .lien_video1, .lien_video2{
   justify-content: center;
@@ -566,6 +572,56 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
 
 
+.img_rosa_bonheur {
+  width: 16vw;
+  object-fit: contain;
+  min-width: 157px;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.img_rosa_bonheur:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.expo_liste{
+  padding-left: 32px;
+}
+
+
+
+.img_ent{
+  width: 40vw;
+  object-fit: contain;
+  min-width: 372px;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.img_ent:hover{
+  -ms-transform: scale(1.05); /* IE 9 */
+-webkit-transform: scale(1.05); /* Safari 3-8 */
+transform: scale(1.05);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.liste_ent{
+  padding-left: 25px;
+}
+
+.legende_ent{
+  font-size: 1.05rem;
+}
+
+.div_img_legende{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .img_refuge_strat{
   width: 26vw;
   object-fit: contain;
@@ -601,6 +657,16 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   border-right: #7977A6 10px solid;
   border-left: #7977A6 10px solid;
   border-bottom: #7977A6 10px solid;
+}
+
+ .lien_opquast{
+text-decoration: none;
+color: black;
+} 
+
+.contenu_cert:hover .lien_opquast {
+  color: white;
+  text-decoration: underline;
 }
 
 
@@ -738,6 +804,11 @@ text-decoration: underline;
 .nav_ul{
   gap: 70px;
 }
+
+.texte_ent{
+  padding-left: 0px;
+}
+
 }
 
 @media (max-width: 924px){
@@ -854,6 +925,11 @@ text-decoration: underline;
   .bouton_cvvideo, .bouton_cv {
     font-size: 1.3rem;
   }
+}
+@media (max-width: 563px){
+.legende_ent {
+  font-size: 1rem;
+}
 }
 
 
@@ -1092,7 +1168,7 @@ body {
     font-size: 5.3rem;
   }
 
-  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney {
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_ent {
     width: 498px;
   }
 
@@ -1179,8 +1255,8 @@ body {
   box-shadow: none;
   }
 
-  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney{
-    width: 327px;
+  .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_ent{
+    width: 408px;
     line-height: normal;
   }
 
