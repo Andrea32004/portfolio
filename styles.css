@@ -595,7 +595,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 .img_ent{
   width: 40vw;
   object-fit: contain;
-  min-width: 372px;
+  min-width: 325px;
   transition: transform .3s, box-shadow .3s;
 }
 
@@ -1256,7 +1256,7 @@ body {
   }
 
   .texte_mbvideo, .texte_interview, .texte_mbsite, .texte_strat, .texte_motion, .texte_linguavers, .texte_disney, .texte_ent{
-    width: 408px;
+    width: 315px;
     line-height: normal;
   }
 
