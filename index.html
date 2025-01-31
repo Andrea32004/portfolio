@@ -42,43 +42,30 @@
   <div class="bloc_accueil" id="blocAccueil">
     <!-- barre de nav -->
     <div class="nav_bouton">
-    <nav>
-      <ul class="nav_ul">
+      <nav>
+        <ul class="nav_ul">
 
-        <a class="nav_propos" href="#qui_suis">Qui suis-je ?</a>
-        <a href="#travaux">Travaux</a>
-        <a class="nav_diplome" href="#certif">Certifications</a>
-      </ul>
-    </nav>
-
-      <div class="boutons_cv">
-        <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/ZSzp9P7Lo1E">CV vidéo</a></div>
-        <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV PDF</a></div>
-      </div>
+          <a class="nav_propos" href="#qui_suis">Qui suis-je ?</a>
+          <a href="#travaux">Réalisations</a>
+          <a class="nav_diplome" href="#certif">Certifications</a>
+        </ul>
+      </nav>
     </div>
-    
+
 
 
     <!-- <div class="bloc_nav"> -->
-      <div class="bloc_titre_bouton">
-        <!-- bouton -->
-        
-        <!-- titre -->
-        
-       <div class="boutons_telephone_cv">
-        <div class="bouton_gsap"><a class="bouton_cvvideo" href="https://youtu.be/ZSzp9P7Lo1E">CV vidéo</a></div>
-        <div class="bouton_gsap"><a class="bouton_cv" href="./img/andrea_laizeau_cv.pdf">CV PDF</a></div>
-    </div> 
+    <div class="bloc_titre_bouton">
 
-    <img class="menu" src="img/menu.png" alt="menu">
-    
-        <div class="titre">
-          <h1 class="andrea"></h1>
-          <p>DÉVELOPPEUSE FRONT-END <br> et <br> CRÉATRICE DE CONTENU DIGITAL</p>
-        </div>
+      <img class="menu" src="img/menu.png" alt="menu">
 
-
+      <div class="titre">
+        <h1 class="andrea"></h1>
+        <p>VIDÉASTE et <br>DÉVELOPPEUSE FRONT-END </p>
       </div>
+
+
+    </div>
 
 
 
@@ -86,7 +73,6 @@
       const menuHamburger = document.querySelector(".menu");
       const navLinks = document.querySelector("nav");
       const titreSection = document.querySelector(".titre");
-      const boutonSection = document.querySelector(".boutons_telephone_cv");
 
       menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile_menu');
@@ -102,8 +88,7 @@
       <h2 class="titre_contact">Contactez-moi</h2>
       <a class="lien_contact" href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
       <a class="lien_contact" href="tel:0601291288">06 01 29 12 88</a> <br>
-      <a class="lien_contact" href="https://www.linkedin.com/in/andrea-laizeau/" target="_blank"
-        aria-label="Redirection vers une nouvelle page">LinkedIn</a>
+      <a class="lien_contact" href="https://www.linkedin.com/in/andrea-laizeau/">LinkedIn</a>
     </div>
 
     <script>
@@ -124,12 +109,10 @@
         });
       });
     </script>
-
-
   </div>
 
-  <div class="me_connaitre" id="qui_suis">
-    <div class="bloc_profil">
+  <main>
+    <div class="bloc_profil" id="qui_suis">
       <br>
       <div class="profil">
 
@@ -143,12 +126,10 @@
           <div class="avec_img">
             <img class="img_profil" src="./img/moi_profil.jpg" alt="photo de profil">
 
-            <div class="texte_mmi">
-              <p class="mmi_experience">J'utilise tous les outils dont je dispose, grâce à mon expérience passée et à
-                mon BUT Métiers du Multimédia et de l'Internet dans lequel j'étudie actuellement, pour mener à bien mes
-                projets</p>
-              <div class="div_lien_matiere"><a class="lien_matiere" href="matiere.html" target="_blank"
-                  aria-label="Redirection vers une nouvelle page">BUT MMI</a></div>
+            <div>
+              <p class="mmi_experience">Grâce à mon expérience et à ma formation en <a href="matiere.html">BUT Métiers du Multimédia et de
+                  l'Internet</a>, je valorise tous les outils à ma disposition pour mener à bien mes projets.
+              </p>
             </div>
           </div>
         </div>
@@ -160,7 +141,7 @@
 
     <!-- SLIDER -->
     <div class="panels">
-      
+
       <div class="panel panel1">
         <p>Animaux</p>
         <p class="slide_titre">Passionnée</p>
@@ -210,345 +191,458 @@
       panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
     </script>
 
-  </div>
 
 
 
-  <div class="bloc_travaux animation" id="travaux">
-    <h1 class="titre_travaux"> Travaux</h1>
+    <h1 class="titre_travaux" id="travaux">Réalisations</h1>
+    <br><br>
+    <!-- -------------------------------------------------------------------------------------------- -->
+
+    <div id="filter-buttons">
+      <div><button class="filter-btn active" data-category="all">Tous les projets</button></div>
+      <div class="div_filtre2">
+        <button class="filter-btn" data-category="videos">Vidéos</button>
+        <button class="filter-btn" data-category="sites">Sites Web</button>
+        <button class="filter-btn" data-category="communication">Communication 360</button>
+      </div>
+    </div>
+
+
+    <br><br>
+    <!-- SER3IN-->
+    <div class="project" data-category="communication">
+      <h2 class="titre_bloc">Agence éthique</h2>
+      <p class="contexte_projet">BUT MMI - 17/01/2025 - équipe x3</p>
+      <br>
+      <div class="bloc_img_texte">
+        <a href="https://www.canva.com/design/DAGYObWjiW0/7DnKx_boe--G1ujVSqZ72A/edit?utm_content=DAGYObWjiW0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img class="img_ent" src="./img/serein.png"
+            alt="SERIN - agence de communication 360"></a>
+        <div class="div_texte">
+          <div class="bouton">
+            <p class="competence competence8">Figma</p>
+            <p class="competence competence8">Miro</p>
+          </div>
+          <p><a class="lien_serein"
+              href="https://www.canva.com/design/DAGYObWjiW0/7DnKx_boe--G1ujVSqZ72A/edit?utm_content=DAGYObWjiW0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Ser3in</a> , une agence de communication
+            360° aux valeurs sociales, écologiques et éthiques. Pour donner vie à son identité, nous avons imaginé son
+            univers visuel et digital : idéation, moodboard, maquettage du site, carte de visite, affiches et analyse
+            des coûts.
+          </p>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+    </div>
+
+   
+  
+
+    <!-- SITES VITRINES -->
+    <div class="project" data-category="sites">
+      <h2 class="titre_bloc">Sites vitrines</h2>
+      <p class="texte_sites">Sur ces deux projets, j’ai occupé plusieurs rôles : développeuse front-end, intégratrice,
+        webmaster et photographe. J’ai conçu leurs maquettes sur Figma, développé <a class="lien_scratch"
+          href="https://mb-osteopatheanimalier.com/">l’un</a> entièrement from scratch et réalisé <a
+          class="lien_cms" href="https://ecuries-des-brosses.com/">l’autre</a> avec un CMS.</p>
+      <br>
+      <div class="bloc_mbsite">
+        <div class="bloc_dedbsite">
+          <div class="bouton">
+            <p class="competence competence1">HTML/CSS</p>
+          </div>
+          <a href="https://mb-osteopatheanimalier.com/"><img class="img_mbsite" src="./img/mb_site_web.jpg"
+              alt="site web de Maëlys Bizet"></a>
+          <p class="contexte_sites">08/2023 - Bénévolat - individuel</p>
+        </div>
+
+        <div class="bloc_dedbsite">
+          <div class="bouton">
+            <p class="competence competence2">WordPress</p>
+          </div>
+          <a href="https://ecuries-des-brosses.com/"><img class="img_mbsite" src="./img/dedbsite.png"
+              alt="site web Domaine équestre des Brosses"></a>
+          <p class="contexte_sites">08/2024 - Bénévolat - individuel</p>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+    </div>
+
+
+
+
+    <!-- VIDEOS COURTES -->
+    <div class="project" data-category="videos">
+      <h2 class="titre_bloc">Vidéos courtes et percutantes</h2>
+      <p class="contexte_projet">Bénévolat - individuel</p>
+      <br>
+
+
+
+    <!--SLIDER VIDEOS poster="./img/mb_video.JPG" -->
+   
+
+      <div class="js-slider">
+        <div class="js-photos">
+
+          <div>
+            <h1 class="titre_vdslider">Nouvel an</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/1DEDBsoiree.mp4" type="video/mp4">
+              <source src="./vidéo/1DEDBsoiree.webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Bootcamp by JTA</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/2bootcamp (1).mp4" type="video/mp4">
+              <source src="./vidéo/2bootcamp (1).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Séance d'Ostéopathie</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/3DEDB (1).mp4" type="video/mp4">
+              <source src="./vidéo/3DEDB (1).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Coach sportif</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/4alberic.mp4" type="video/mp4">
+              <source src="./vidéo/4alberic.webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Montage | Validations</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Concours équestre</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/5final_version_cso.mp4" type="video/mp4">
+              <source src="./vidéo/5final_version_cso.webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Coach équestre</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/6DEDB (2).mp4" type="video/mp4">
+              <source src="./vidéo/6DEDB (2).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Teaser</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/7bootcamp (5).mp4" type="video/mp4">
+              <source src="./vidéo/7bootcamp (5).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Décontraction</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/8maelys (1).mp4" type="video/mp4">
+              <source src="./vidéo/8maelys (1).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Quotidien métier</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/9DEDB (4).mp4" type="video/mp4">
+              <source src="./vidéo/9DEDB (4).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Expressions</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/10maelys (3).mp4" type="video/mp4">
+              <source src="./vidéo/10maelys (3).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Évènement sportif</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/11bootcamp (3).mp4" type="video/mp4">
+              <source src="./vidéo/11bootcamp (3).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+          <div>
+            <h1 class="titre_vdslider">Sourir</h1>
+            <video class="taille_video_slider" controls>
+              <source src="./vidéo/12maelys (2).mp4" type="video/mp4">
+              <source src="./vidéo/12maelys (2).webm" type="video/webm">
+            </video>
+            <p class="descr_vd_slider">Tournage | Montage</p>
+          </div>
+
+
+
+        </div>
+
+        <div class="js-navigation">
+          <button class="js-btn-decale-droite">
+            <span class="arrow"></span>
+          </button>
+          <button class="js-btn-decale-gauche">
+            <span class="arrow"></span>
+          </button>
+        </div>
+      </div>
+
+      <p class="basline_reel">Filmer, monter, raconter… <br> Tout est une question d’émotion et d’instant</p>
+
+
+      <!-- -------------------------------------------------------------------------------------------------------- -->
+
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+    </div>
+
+
+    <!-- EXPOSITION -->
+    <div class="project" data-category="communication">
+      <h2 class="titre_bloc">Exposition virtuelle</h2>
+      <p class="contexte_projet">28/03/2024 - BUT MMI - équipe x6</p>
+      <br>
+      <div class="bloc_img_texte2">
+        <div>
+          <a href="https://rosabonheur.netlify.app/"><img
+              class="img_rosa_bonheur" src="./img/rosa_bonheur.png" alt="Exposition virtuelle sur Rosa Bonheur"></a>
+        </div>
+
+        <div class="div_texte2">
+          <div class="bouton">
+            <p class="competence competence4">Communication</p>
+            <p class="competence competence4">Montage vidéo</p>
+          </div>
+          <p class="lien_rosa">En deux mois, nous avons conçu <a href="https://rosabonheur.netlify.app/">"À travers
+              leurs yeux"</a>, une exposition virtuelle, ainsi que <a href="https://kleio-agence.fr/">Kléio</a>, une
+            agence de communication. J'ai :
+          <div class="expo_liste">
+            <li>Géré l'équipe et les <a
+                href="https://www.instagram.com/kleio_agence?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">réseaux
+                sociaux</a></li>
+            <li>Réalisé le <a href="https://youtu.be/UhW2qpKKqNA?si=YOz6g42RabkreA-Q">teaser</a></li>
+            <li>Intégré les pages mentions légales</li>
+            <li>Rédigé les textes</li>
+          </div>
+          Chaque point a été réalisé main dans la main avec l'ensemble des membres.
+          </p>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+
+    </div>
+
+
+    <!-- PLATEFORME PEDAGOGIQUE ENT -->
+    <div class="project" data-category="sites">
+      <h2 class="titre_bloc">Plateforme pédagogique</h2>
+      <p class="contexte_projet">12/01/2024 - BUT MMI - équipe x4</p>
+      <br>
+      <div class="bloc_img_texte">
+        <div class="div_img_legende">
+          <a href="https://dariaiarovaia.great-site.net/ENT/login.php"><img class="img_ent" src="./img/ent.png" alt="ENT"></a>
+          <p class="legende_ent">login : andrea.laizeau | mp : andrea1234 (étudiant) <br>
+            login : sophie.david | mp : sophie1234 (administration)</p>
+        </div>
+
+        <div class="div_texte">
+          <div class="bouton">
+            <p class="competence competence5">HTML</p>
+            <p class="competence competence5">CSS</p>
+            <p class="competence competence5">Figma</p>
+          </div>
+          <div>
+            <p>
+              L'analyse, la créativité, la technique ou encore la communication ont été des compétences renforcées lors
+              de <a class="lien_ent" href="https://dariaiarovaia.great-site.net/ENT/login.php">ce projet</a>. Voici les tâches effectuées :
+            <div class="liste_ent">
+
+              <li>Interviews de plusieurs étudiants, avec un ENT différent du nôtre </li>
+              <li>Tests utilisateurs réalisés sur nos wireframes</li>
+              <li>Conception des maquettes</li>
+              <li>Développement du site via GitHub (J'ai principalement effectué l'intégration)</li>
+
+            </div>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+    </div>
+
+
+
+    <!-- CAUSE ANIMALE MOTION -->
+    <div class="project" data-category="videos">
+      <h2 class="titre_bloc">Cause animale</h2>
+      <p class="contexte_projet">06/2023 -BUT MMI - équipe x5</p>
+      <br>
+      <div class="bloc_img_texte2">
+        <iframe class="taille_motion" src="https://www.youtube.com/embed/1VAf3Epv2B8?si=BVAKVKxrNldNKw-C"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
+        <div class="div_texte2">
+          <div class="bouton">
+            <p class="competence competence6">After Effects</p>
+            <p class="competence competence6">Mindmeister</p>
+          </div>
+          <p class="lien_animal">
+            Afin de moderniser la communication d’un refuge animalier, nous avons conçu une <a
+              href="https://mm.tt/app/map/2752765894?t=GQQWxFqD5p">stratégie éditoriale</a> visant à mieux cibler leur
+            public. Pour sensibiliser à l’abandon des animaux, j’ai co-créé un motion design, imaginé l’histoire, rédigé
+            et
+            animé le texte de la vidéo, tout en veillant à refléter l’identité et les valeurs de l’association. Ce
+            projet
+            allie créativité et impact émotionnel pour soutenir pleinement la mission du refuge.</p>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="ligne"></div>
+      <br><br><br>
+
+    </div>
+
+
+
+
+    <!-- INTERVIEW THEATRE PBL MONTREUIL -->
+    <div class="project" data-category="videos">
+      <h2 class="titre_bloc">Théâtre public de Montreuil</h2>
+      <p class="contexte_projet">BUT MMI - 06/02/2023 - équipe x6</p>
+      <br>
+      <div class="bloc_img_texte">
+
+        <iframe class="taille_video_interview" src="https://www.youtube.com/embed/GWf9ZLwHr5E?si=RKzv73pRgE6UOqc5"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div class="div_texte">
+          <div class="bouton">
+            <p class="competence competence7">Premiere Pro</p>
+          </div>
+          <p>Ensemble, nous avons : <br>
+            - créé des questions pertinentes <br>
+            - rédigé des mails et appels professionnels <br>
+            - mis à l’aise l’intervenante devant la caméra <br>
+            - assuré le tournage (repérage des lieux, installation des lumières, micros, caméra…)
+          </p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <br><br><br>
+
+    <!-- CERTIFICATIONS -->
+    <div class="bloc_certif">
+      <h1 class="titre_travaux" id="certif">Certifications</h1>
+      <br>
+      <img src="fdd" alt="">
+      <div class="certification">
+
+        <div class="contenu_cert">
+          <div>
+            <img class="logo_certif" src=".//img/opquast.png" alt="logo Opquast">
+          </div>
+          <div class="texte_cert">
+              <h2 class="titre_certif">Certification Opquast</h2>
+              <p class="soustitre_certif">-Les règles de l'assurance qualité web-</p>
+          </div>
+        </div>
+
+        <div class="contenu_cert">
+          <div>
+            <img class="logo_certif" src="./img/permis.jpeg" alt="logo Agence nationale des titres sécurisés">
+          </div>
+          <div class="texte_cert">
+            <h2 class="titre_certif">Permis B</h2>
+            <p class="soustitre_certif">Agence nationale des titres sécurisés - ANTS</p>
+          </div>
+        </div>
+
+        <div class="contenu_cert">
+          <div>
+            <img class="logo_certif" src="./img/psc1.png" alt="logo Protection Civile française">
+          </div>
+          <div class="texte_cert">
+            <h2 class="titre_certif">PSC1 <span>-Prévention Secours Civique Niveau 1</span></h2>
+            <p class="soustitre_certif">Protection Civile française</p>
+          </div>
+        </div>
+
+        <div class="contenu_cert">
+          <div>
+            <img class="logo_certif" src="./img/ffe.png" alt="logo fédération française d'équitation">
+          </div>
+          <div class="texte_cert">
+            <h2 class="titre_certif">Galop 7 <span>-Maîtrise Avancée en Équitation</span> </h2>
+            <p class="soustitre_certif">Fédération Française d'Equitation</p>
+          </div>
+        </div>
+      </div>
+      <br> <br>
+    </div>
+
+    <br><br>
+    <header>
+      <div>
+        <h1>Page</h1>
+        <li><a href="#blocAccueil">Accueil</a></li>
+        <li><a href="#qui_suis">Qui suis-je ?</a></li>
+        <li><a href="#travaux">Réalisations</a></li>
+        <li><a href="#certif">Certifications</a></li>
+      </div>
+
+
+
+      <div>
+        <h1>Contact</h1>
+        <li><a href="tel:0601291288">06 01 29 12 88</a></li>
+        <li><a href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a></li>
+      </div>
+
+      <div>
+        <h1>Plus d'infos ?</h1>
+        <li><a href="https://youtu.be/ZSzp9P7Lo1E">CV vidéo</a></li>
+        <li><a href="./img/andrea_laizeau_cv.pdf">CV pdf</a></li>
+      </div>
+
+    </header>
+
     <br><br>
 
-
-    <h2 class="titre_bloc">Interview -équipe x6</h2>
-    <p class="contexte_projet">06/02/2023 -BUT MMI</p>
-    <br>
-    <div class="bloc_interview">
-
-      <iframe class="taille_video_interview" src="https://www.youtube.com/embed/GWf9ZLwHr5E?si=RKzv73pRgE6UOqc5"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Adobe Premiere Pro</p>
-        </div>
-        <p class="texte_interview">Ensemble, nous avons : <br>
-          - créer des questions pertinentes <br>
-          - rédiger des mails et appels professionnels <br>
-          - mettre à l’aise la personne devant la caméra <br>
-          - tourner (repérage des lieux, installation des lumières, micros, caméra…)
-        </p>
-      </div>
-
-    </div>
-
-
-    <br><br><br>
-    <div class="ligne"></div>
-    <br><br><br>
-
-
-    <h2 class="titre_bloc">Site web -individuel</h2>
-    <p class="contexte_projet">08/2023 -Bénévolat</p>
-    <br>
-    <div class="bloc_mbsite">
-      <div>
-        <a href="https://mb-osteopatheanimalier.com/" target="_blank"
-          aria-label="Redirection vers une nouvelle page"><img class="img_mbsite" src="./img/mb_site_web.jpg"
-            alt="site web de Maëlys Bizet"></a>
-      </div>
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">HTML</p>
-          <p class="competence">CSS</p>
-          <p class="competence">Figma</p>
-        </div>
-        <p class="texte_mbsite">J'ai porté de nombreuses casquettes : web designer, conceptrice UX/UI, intégratrice web
-          et photographe. <br> La communication, l’organisation, la patience et la prise de décision ont été les clés de
-          réussite de ce projet.</p>
-      </div>
-
-    </div>
-    <br>
-    <br><br><br>
-    <h2 class="titre_bloc">Vidéos -individuel</h2>
-    <p class="contexte_projet">08/2023 -Bénévolat</p>
-    <br>
-    <div class="bloc_v2">
-      <div>
-        <video class="taille_video_mb" controls poster="./img/mb_video.JPG">
-          <source src="./img/video_mb.mp4" type="video/mp4">
-          <source src="./img/video_mb.webm" type="video/webm">
-          Vidéo : massage -ostéopathie animale
-        </video>
-      </div>
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Adobe Premiere Pro</p>
-        </div>
-        <p class="texte_mbvideo">Vidéaste, pour Maëlys bizet, lors d’un concours d’Agility canin. J’ai su m’adapter au
-          cadre de tournage et à la sensibilité des animaux.<br>
-          <a class="lien_video1" href="https://www.youtube.com/playlist?list=PL-FfKormjeqzfOTWk51I_5_mumhncKinS"
-            target="_blank" aria-label="Ouverture d'une nouvelle page">Voir l'ensemble des vidéos</a>
-        </p>
-      </div>
-    </div>
-
-<!-- Expo à droite -->
-<br><br><br>
-<div class="ligne"></div>
-<br><br><br>
-<h2 class="titre_bloc">À travers leurs yeux -équipe x6</h2>
-<p class="contexte_projet">28/03/2024 -BUT MMI</p>
-<br>
-<div class="bloc_stratedi">
-  <div>
-    <a href="https://rosabonheur.netlify.app/" target="_blank"
-      aria-label="Une nouvelle page s'ouvrira"><img class="img_rosa_bonheur" src="./img/rosa_bonheur.png"
-        alt="Exposition virtuelle sur Rosa Bonheur"></a>
-  </div>
-
-  <div class="div_texte">
-    <div class="bouton">
-      <p class="competence">Communication</p>
-      <p class="competence">Montage vidéo</p>
-    </div>
-    <p class="texte_strat">Durant 2 mois nous avons créé <a href="https://rosabonheur.netlify.app/">"À travers leurs yeux"</a>, exposition virtuelle ainsi que <a href="https://kleio-agence.fr/">Kléio</a>, agence de communication. J'ai : 
-      <div class="expo_liste">
-      <li>Géré une équipe et les <a href="https://www.instagram.com/kleio_agence?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">réseaux sociaux</a> du projet</li> 
-      <li>Réalisé le <a href="https://youtu.be/UhW2qpKKqNA?si=YOz6g42RabkreA-Q">teaser</a></li>
-      <li>Intégré les pages mentions légales</li>
-      <li>Rédigé les textes</li>
-    </div>
-Chaque point de cette liste a été réalisé main dans la main avec mon équipe. 
-    </p>
-  </div>
-</div>
-
-
-
-
-<!-- Ent à gauche -->
-<br><br><br>
-<div class="ligne"></div>
-<br><br><br>
-
-
-<h2 class="titre_bloc">ENT - équipe x4</h2>
-<p class="contexte_projet">12/01/2024 -BUT MMI</p>
-<br>
-<div class="bloc_mbsite">
-  <div class="div_img_legende">
-    <a href="https://dariaiarovaia.great-site.net/ENT/login.php" target="_blank"
-      aria-label="Redirection vers une nouvelle page"><img class="img_ent" src="./img/ent.png"
-        alt="ENT"></a>
-        <p class="legende_ent">login : andrea.laizeau | mp : andrea1234 (étudiant) <br> 
-          login : sophie.david | mp : sophie1234 (administration)</p>
-  </div>
-
-  <div class="div_texte">
-    <div class="bouton">
-      <p class="competence">HTML</p>
-      <p class="competence">CSS</p>
-      <p class="competence">Figma</p>
-    </div>
-<div class="texte_ent">
-    <p>
-      L'analyse, la créativité, la technique ou encore la communication ont été des compétences renforcées lors de ce projet. Voici les tâches effectuées :
-      <div class="liste_ent">
-
-    <li>Interviews de plusieurs étudiants, avec un ENT différent du nôtre </li>
-    <li>Tests utilisateurs réalisés sur nos wireframes</li>
-    <li>Conception des maquettes</li>
-    <li>Développement du site via GitHub (J'ai principalement effectué l'intégration)</li> 
-
-      </div>
-    </p>
-  </div>
-  </div>
-
-  <!-- L'analyse, la créativité, la technique ou encore la communication ont été des compétences renforcés lors de ce projet.Voici les tâches effectuées :      <br>
-  - Interview de plusieurs étudiants, avec un ENT différent au notre <br>
-  - Test utilisateurs grâce à nos Wireframes <br>
-  - Conçus les maquettes <br>
-  - Développé le site via GitHub (j'ai principalement fait l'intégration)   -->
-
-</div>
-
-
-
-
-
-
-
-    <br><br><br>
-    <div class="ligne"></div>
-    <br><br><br>
-    <h2 class="titre_bloc">Stratégie éditorial -équipe x5</h2>
-    <p class="contexte_projet">25/05/2023 -BUT MMI</p>
-    <br>
-    <div class="bloc_stratedi">
-      <div>
-        <!-- changer lien pour anonyme -->
-        <a href="https://mm.tt/app/map/2752765894?t=GQQWxFqD5p" target="_blank"
-          aria-label="Une nouvelle page s'ouvrira"><img class="img_refuge_strat" src="./img/strategie_editorial.jpg"
-            alt="stratégie éditorial"></a>
-      </div>
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Mindmeister</p>
-        </div>
-        <p class="texte_strat">Dans le cadre de la refonte de la communication digitale d'un refuge animalier, nous
-          avons réuni tous les éléments nécessaires pour mieux cibler notre public, afin que leurs sites web, motion
-          design, et réseaux sociaux reflètent leur identité.</p>
-      </div>
-    </div>
-
-
-    <br><br><br><br>
-    <h2 class="titre_bloc">Motion design -équipe x5</h2>
-    <p class="contexte_projet">16/06/2023 -BUT MMI</p>
-    <br>
-    <div class="bloc_motion">
-      <iframe class="taille_motion" src="https://www.youtube.com/embed/1VAf3Epv2B8?si=BVAKVKxrNldNKw-C"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Adobe After Effects </p>
-        </div>
-        <p class="texte_motion">
-          Nous avons conçu l'histoire en équipe, j'ai rédigé et animé le texte de la vidéo. <br>
-          Tout au long de cette refont, j'ai analysé l'ambiance et la communication de l'association, scénarisé, animé,
-          et rédigé le contenu écrit.</p>
-      </div>
-    </div>
-
-
-
-
-    <!-- <br><br><br>
-    <div class="ligne"></div>
-    <br><br><br>
-    <h2 class="titre_bloc">Linguavers -équipe x2</h2>
-    <p class="contexte_projet">16/05/2023 -BUT MMI</p>
-    <br>
-    <div class="bloc_v1">
-      <div>
-        <a href="./img/LinguaVerse - Andréa L., Daria I..pdf" target="_blank"
-          aria-label="Redirection dans une nouvelle page"><img class="img_carre" src="./img/linguavers.jpg"
-            alt="page de couverture Linguavers"></a>
-      </div>
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Marketing</p>
-        </div>
-        <p class="texte_linguavers">Une matinée. C’est le temps qu’il nous a fallu pour créer une start-up fictive.</p>
-      </div>
-    </div> -->
-
-    <br><br><br>
-    <div class="ligne"></div>
-    <br><br><br>
-    <h2 class="titre_bloc">Disneyland -individuel</h2>
-    <p class="contexte_projet">04/2023 -BUT MMI</p>
-    <br>
-    <div class="bloc_disney">
-      <video class="taille_video_refont" muted controls>
-        <source src="./img/video_refonte_disney.mp4" type="video/mp4">
-        <source src="./img/video_refonte_disney.webm" type="video/webm">
-        Votre navigateur ne supporte pas la balise vidéo.
-      </video>
-
-
-      <div class="div_texte">
-        <div class="bouton">
-          <p class="competence">Figma</p>
-        </div>
-        <p class="texte_disney">Cette refonte a pour but de raviver l'ancienne magie emblématique de Disney en utilisant
-          des photos historiques afin de mettre en avant les moments emblématiques du passé de Disneyland. Cette
-          approche vise à susciter les anciens souvenirs des visiteurs de ce monde magique.
-          <a class="lien_video2"
-            href="https://www.figma.com/file/ltB6n8OhFmo6sQNOjEpGPX/refonte_disney?type=design&node-id=0%3A1&mode=design&t=TwJ37H0BkMtuD3Gc-1"
-            target="_blank" aria-label="Redirection sur une nouvelle page">Maquette Figma</a>
-        </p>
-      </div>
-    </div>
-    <br><br> <br>
-  </div>
-
-  <!-- DIPLOMES -->
-  <div class="bloc_diplome" id="certif">
-    <h1 class="titre_travaux">Certifications</h1>
-    <br><br><br>
-<img src="fdd" alt="">
-    <div class="certification">
-
-      <div class="contenu_cert">
-        <div>
-          <a class="lien_opquast" href=""><img class="logo_certif" src=".//img/opquast.png" alt="logo Opquast"></a> 
-        </div>
-        <div class="texte_cert">
-          <a class="lien_opquast" href=""><h2 class="titre_certif">Certification Opquast</h2></a>
-          <a class="lien_opquast" href=""><p class="soustitre_certif">-Les règles de l'assurance qualité web-</p></a>
-        </div>
-      </div>
-
-      <div class="contenu_cert">
-        <div>
-          <img class="logo_certif" src="./img/permis.jpeg" alt="logo Agence nationale des titres sécurisés">
-        </div>
-        <div class="texte_cert">
-          <h2 class="titre_certif">Permis B</h2>
-          <p class="soustitre_certif">Agence nationale des titres sécurisés - ANTS</p>
-        </div>
-      </div>
-
-      <div class="contenu_cert">
-        <div>
-          <img class="logo_certif" src="./img/psc1.png" alt="logo Protection Civile française">
-        </div>
-        <div class="texte_cert">
-          <h2 class="titre_certif">PSC1 <span>-Prévention Secours Civique Niveau 1</span></h2>
-          <p class="soustitre_certif">Protection Civile française</p>
-        </div>
-      </div>
-
-      <div class="contenu_cert">
-        <div>
-          <img class="logo_certif" src="./img/ffe.png" alt="logo fédération française d'équitation">
-        </div>
-        <div class="texte_cert">
-          <h2 class="titre_certif">Galop 7 <span>-Maîtrise Avancée en Équitation</span> </h2>
-          <p class="soustitre_certif">Fédération Française d'Equitation</p>
-        </div>
-      </div>
-
-
-    </div>
-    <br><br>
-  </div>
-
-  <div class="final_contact">
-    <div class="bloc1_final_contact">
-      <a class="lien_contact final_telephone" href="tel:0601291288">06 01 29 12 88</a>
-      <a class="lien_contact final_telephone"
-        href="mailto:andrea.laizeau@gmail.com?subject=HTML link">andrea.laizeau@gmail.com</a> <br>
-    </div>
-
-    <div class="final_bloc_bouton">
-      <div><a class="final_bouton" href="https://youtu.be/ZSzp9P7Lo1E">CV vidéo</a></div>
-      <div><a class="final_bouton" href="./img/andrea_laizeau_cv.pdf">CV pdf</a></div>
-    </div>
-  </div>
-<br><br>
-  </div>
 </body>
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -558,5 +652,6 @@ Chaque point de cette liste a été réalisé main dans la main avec mon équipe
 
 <!-- texte -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</main>
 
 </html>
