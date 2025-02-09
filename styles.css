@@ -441,6 +441,7 @@ color: #8971A2;
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
+
 }
 
 .filter-btn {
@@ -450,6 +451,7 @@ color: #8971A2;
   color: #7977A6;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .filter-btn:hover {
@@ -654,6 +656,21 @@ color: #8971A2;
   color: #016127;
 }
 
+.competence9{
+  -webkit-text-stroke: 0.6px;
+  -webkit-text-stroke-color: #4AA3A9;
+  color: #4AA3A9;
+}
+
+
+.competence10{
+  -webkit-text-stroke: 0.6px;
+  -webkit-text-stroke-color: #428372;
+  color: #428372;
+}
+
+
+
 .lien_rosa a{
   color: black;
 }
@@ -662,26 +679,19 @@ color: #8971A2;
   color: #627E8B;
 }
 
-.lien_scratch{
-  color: black;
-}
+
 
 .lien_scratch:hover{
   color: #875C3C;
 }
 
-.lien_cms{
-  color: black;
-}
+
 
 .lien_cms:hover{
   color: #53503F;
 }
 
 
-.lien_serein{
-  color: black;
-}
 
 .lien_serein:hover{
   color: #006026;
@@ -697,13 +707,18 @@ color: #8971A2;
 }
 
 
-.lien_ent{
+.lien_ent, .lien_noteintention, .lien_serein, .lien_cms, .lien_scratch{
   color: black;
 }
 
 .lien_ent:hover{
   color: #A37330;
 }
+
+.lien_noteintention:hover{
+  color: #4AA3A9;
+}
+
 
 
 .lien_animal a{
@@ -772,12 +787,17 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
 
 
-.img_rosa_bonheur {
+.img_rosa_bonheur, .img_podcastsolo {
   width: 16vw;
   object-fit: contain;
   min-width: 157px;
+}
+
+.img_rosa_bonheur{
   transition: transform .3s, box-shadow .3s;
 }
+
+
 
 .img_rosa_bonheur:hover{
   -ms-transform: scale(1.1); /* IE 9 */
@@ -791,10 +811,20 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 
-.img_ent{
+.audio_affiche{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.img_ent, .podcast_gpe{
   width: 35vw;
   object-fit: contain;
-  min-width: 325px;
+}
+
+.img_ent{
   transition: transform .3s, box-shadow .3s;
 }
 
@@ -1221,6 +1251,9 @@ body {
     justify-content: space-evenly;
   }
 
+  .img_ent, .podcast_gpe{
+    min-width: 325px;
+    }
 }
 
 /* téléphone */
